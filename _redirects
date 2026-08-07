@@ -1,0 +1,9 @@
+# Deleted pages → redirect to About
+/journey.html        /about.html          301
+/learn-more.html     /about.html          301
+
+# Deleted portfolio → redirect to Results
+/portfolio.html      /results.html        301
+
+# Deleted Discover → redirect to How It Works
+/discover-how.html   /how-it-works.html   301

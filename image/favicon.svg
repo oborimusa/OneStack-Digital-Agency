@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Dark background with rounded corners -->
+  <rect width="100" height="100" rx="22" fill="#0a0a0a"/>
+  <!-- Your Brand Gold Block (left) -->
+  <rect x="15" y="25" width="28" height="22" rx="5" fill="#f5a623"/>
+  <!-- Your Brand Gold Block (right) -->
+  <rect x="57" y="25" width="28" height="22" rx="5" fill="#f5a623"/>
+  <!-- "OS" Text in Gold -->
+  <text x="50" y="75" font-family="'Segoe UI', Arial, sans-serif" font-weight="800" font-size="32" fill="#f5a623" text-anchor="middle" letter-spacing="2">OS</text>
+</svg>

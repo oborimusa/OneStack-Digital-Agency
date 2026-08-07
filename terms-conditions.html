@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
+  <!-- ===== FAVICON ===== -->
+  <link rel="icon" type="image/svg+xml" href="image/favicon.svg" />
+  <link rel="apple-touch-icon" sizes="180x180" href="image/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="image/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="image/favicon-16x16.png" />
+
+  <!-- ===== SEO ===== -->
+  <title>Terms & Conditions | OneStack Digital Agency</title>
+  <meta name="description" content="Read OneStack Digital Agency's terms and conditions. Understand our service agreements, payment terms, and legal policies for Nigerian SMEs." />
+  <meta name="keywords" content="terms and conditions, service agreement, OneStack, digital agency Nigeria, legal terms" />
+  <meta name="author" content="OneStack Digital Agency" />
+
+  <!-- ===== OPEN GRAPH ===== -->
+  <meta property="og:title" content="Terms & Conditions | OneStack Digital Agency" />
+  <meta property="og:description" content="Read OneStack Digital Agency's terms and conditions." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://onestack.ng/terms-conditions.html" />
+
+  <!-- ===== GOOGLE FONTS ===== -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- ===== FONT AWESOME ===== -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #ffffff;
+      color: #1e293b;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+      padding-top: 76px;
+    }
+
+    :root {
+      --primary: #0a2647;
+      --primary-dark: #051a34;
+      --primary-light: #1e3a5f;
+      --accent: #c5a059;
+      --accent-light: #d4b37a;
+      --accent-dark: #9e7b44;
+      --white: #ffffff;
+      --off-white: #f8fafc;
+      --gray-100: #f1f5f9;
+      --gray-200: #e2e8f0;
+      --gray-600: #475569;
+      --gray-800: #1e293b;
+      --dark: #0f172a;
+      --gradient-primary: linear-gradient(135deg, #0a2647 0%, #1e3a5f 100%);
+      --gradient-accent: linear-gradient(135deg, #c5a059 0%, #d4b37a 100%);
+      --shadow-sm: 0 10px 30px -15px rgba(0, 0, 0, 0.1);
+      --shadow-md: 0 20px 40px -20px rgba(0, 0, 0, 0.2);
+      --shadow-lg: 0 30px 60px -30px rgba(0, 0, 0, 0.3);
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(8px);
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      border-bottom: 1px solid var(--gray-200);
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .logo img {
+      width: 45px;
+      height: 45px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .logo-text h1 {
+      font-family: 'Space Grotesk', monospace;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.2;
+    }
+
+    .logo-text p {
+      font-size: 0.6rem;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: var(--gray-800);
+      transition: 0.2s;
+      padding: 8px 12px;
+      border-radius: 40px;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .btn-consult {
+      background: var(--gradient-primary);
+      color: white !important;
+      padding: 10px 28px !important;
+      border-radius: 40px;
+      font-weight: 600;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .btn-consult:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      color: white !important;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.6rem;
+      cursor: pointer;
+    }
+
+    @media (max-width: 880px) {
+      .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        background: white;
+        padding: 20px 0;
+        gap: 1rem;
+      }
+      .nav-links.active {
+        display: flex;
+      }
+      .menu-toggle {
+        display: block;
+      }
+      .container {
+        padding: 0 20px;
+      }
+    }
+
+    /* ===== LEGAL CONTENT ===== */
+    .legal-section {
+      padding: 60px 0 100px;
+      background: white;
+    }
+
+    .legal-container {
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    .legal-container h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: var(--primary);
+      font-family: 'Space Grotesk', sans-serif;
+      margin-bottom: 0.5rem;
+    }
+
+    .legal-container .last-updated {
+      color: var(--gray-600);
+      font-size: 0.95rem;
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--gray-200);
+    }
+
+    .legal-container h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--primary);
+      font-family: 'Space Grotesk', sans-serif;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .legal-container h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .legal-container p {
+      color: var(--gray-600);
+      margin-bottom: 1rem;
+    }
+
+    .legal-container ul {
+      margin: 1rem 0 1.5rem 1.5rem;
+      color: var(--gray-600);
+    }
+
+    .legal-container ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    .legal-container .highlight-box {
+      background: var(--off-white);
+      border-left: 4px solid var(--accent);
+      padding: 1.5rem 2rem;
+      border-radius: 0 12px 12px 0;
+      margin: 1.5rem 0;
+    }
+
+    .legal-container .highlight-box p {
+      margin: 0;
+    }
+
+    .legal-container .toc {
+      background: var(--off-white);
+      padding: 1.5rem 2rem;
+      border-radius: 12px;
+      margin: 1.5rem 0 2.5rem;
+      border: 1px solid var(--gray-200);
+    }
+
+    .legal-container .toc h3 {
+      margin-top: 0;
+      color: var(--primary);
+    }
+
+    .legal-container .toc ul {
+      margin: 0.5rem 0 0 0;
+      list-style: none;
+      padding: 0;
+    }
+
+    .legal-container .toc ul li {
+      padding: 0.3rem 0;
+      border-bottom: 1px solid var(--gray-200);
+    }
+
+    .legal-container .toc ul li:last-child {
+      border-bottom: none;
+    }
+
+    .legal-container .toc ul li a {
+      color: var(--primary);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .legal-container .toc ul li a:hover {
+      color: var(--accent);
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--primary);
+      color: var(--off-white);
+      padding: 60px 0 30px;
+    }
+
+    .footer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: space-between;
+    }
+
+    .footer-col h4 {
+      color: white;
+      margin-bottom: 20px;
+      font-size: 1rem;
+    }
+
+    .footer-col a {
+      display: block;
+      color: var(--gray-300);
+      text-decoration: none;
+      margin-bottom: 12px;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: var(--accent);
+    }
+
+    .footer-col p {
+      margin-bottom: 8px;
+    }
+
+    .social-icons a {
+      margin-right: 18px;
+      font-size: 1.2rem;
+      color: var(--gray-300);
+    }
+
+    .social-icons a:hover {
+      color: var(--accent);
+    }
+
+    .copyright {
+      text-align: center;
+      padding-top: 40px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      margin-top: 40px;
+      font-size: 0.8rem;
+    }
+
+    .copyright a {
+      color: var(--gray-300);
+      text-decoration: none;
+      margin: 0 12px;
+      transition: color 0.2s;
+    }
+
+    .copyright a:hover {
+      color: var(--accent);
+    }
+
+    @media (max-width: 880px) {
+      .footer-grid {
+        flex-direction: column;
+        text-align: center;
+      }
+      .footer .social-icons {
+        justify-content: center;
+      }
+      .legal-container h1 {
+        font-size: 2rem;
+      }
+      .legal-container h2 {
+        font-size: 1.3rem;
+      }
+      .legal-section {
+        padding: 40px 0 60px;
+      }
+    }
+
+    @media (max-width: 550px) {
+      .legal-container .highlight-box {
+        padding: 1rem 1.25rem;
+      }
+      .legal-container .toc {
+        padding: 1rem 1.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header style="display: flex; justify-content: space-between; align-items: center; padding: 20px 30px; border-bottom: 1px solid #222; flex-wrap: wrap;">
+    <a href="/" style="font-size: 1.8rem; font-weight: 800; color: #fff; text-decoration: none;">
+        ONE<span style="color: #f5a623;">STACK</span>DA
+    </a>
+    <nav style="display: flex; gap: 25px; flex-wrap: wrap;">
+        <a href="/" style="color: #aaa; text-decoration: none; font-weight: 500;">Home</a>
+        <a href="/services.html" style="color: #aaa; text-decoration: none; font-weight: 500;">Services</a>
+        <a href="/about.html" style="color: #aaa; text-decoration: none; font-weight: 500;">About</a>
+        <a href="/contact.html" style="color: #f5a623; text-decoration: none; font-weight: 700;">Contact</a>
+    </nav>
+</header>
+
+  <!-- ===== LEGAL CONTENT ===== -->
+  <section class="legal-section">
+    <div class="container legal-container">
+
+      <h1>Terms & Conditions</h1>
+      <p class="last-updated"><strong>Last updated:</strong> June 2025</p>
+
+      <p>Welcome to OneStack Digital Agency. By using our website and services, you agree to comply with and be bound by the following terms and conditions. Please read them carefully.</p>
+
+      <div class="highlight-box">
+        <p><strong>📌 In short:</strong> By using our site and services, you agree to these terms. We provide digital services as described. Payment terms, deliverables, and guarantees are clearly defined. We're not responsible for things outside our control.</p>
+      </div>
+
+      <!-- ===== TABLE OF CONTENTS ===== -->
+      <div class="toc">
+        <h3>📑 Table of Contents</h3>
+        <ul>
+          <li><a href="#section1">1. Acceptance of Terms</a></li>
+          <li><a href="#section2">2. Services</a></li>
+          <li><a href="#section3">3. Service Agreements</a></li>
+          <li><a href="#section4">4. Pricing and Payment</a></li>
+          <li><a href="#section5">5. Intellectual Property</a></li>
+          <li><a href="#section6">6. Confidentiality</a></li>
+          <li><a href="#section7">7. Limitation of Liability</a></li>
+          <li><a href="#section8">8. Refund Policy</a></li>
+          <li><a href="#section9">9. Term and Termination</a></li>
+          <li><a href="#section10">10. Client Responsibilities</a></li>
+          <li><a href="#section11">11. Warranties and Disclaimers</a></li>
+          <li><a href="#section12">12. Indemnification</a></li>
+          <li><a href="#section13">13. Governing Law</a></li>
+          <li><a href="#section14">14. Changes to Terms</a></li>
+          <li><a href="#section15">15. Entire Agreement</a></li>
+          <li><a href="#section16">16. Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- ===== SECTION 1 ===== -->
+      <h2 id="section1">1. Acceptance of Terms</h2>
+      <p>By accessing this website and using our services, you accept these Terms & Conditions in full. If you do not agree with any part of these terms, you must not use our website or services.</p>
+      <p>These terms constitute a legally binding agreement between you ("Client," "You," or "Your") and OneStack Digital Agency ("We," "Us," or "Our").</p>
+
+      <!-- ===== SECTION 2 ===== -->
+      <h2 id="section2">2. Services</h2>
+      <p>OneStack Digital Agency provides digital solutions including but not limited to:</p>
+      <ul>
+        <li>Web design and development</li>
+        <li>E-commerce solutions</li>
+        <li>Search Engine Optimization (SEO)</li>
+        <li>Digital marketing and advertising</li>
+        <li>Brand identity and design</li>
+        <li>AI automation and chatbots</li>
+        <li>IT support and maintenance</li>
+        <li>Analytics and reporting</li>
+        <li>Content creation and copywriting</li>
+        <li>Social media management</li>
+      </ul>
+
+      <h3>2.1 Service Descriptions</h3>
+      <p>We strive to accurately describe our services. However, we do not warrant that service descriptions, pricing, or other content on our site is error-free. We reserve the right to correct any errors, inaccuracies, or omissions.</p>
+
+      <h3>2.2 Service Availability</h3>
+      <p>All services are subject to availability. We reserve the right to modify, suspend, or discontinue any service at any time with reasonable notice.</p>
+
+      <!-- ===== SECTION 3 ===== -->
+      <h2 id="section3">3. Service Agreements</h2>
+      <p>Specific services are governed by separate service agreements or proposals. These agreements will detail:</p>
+      <ul>
+        <li><strong>Scope of work</strong> – Exactly what will be delivered</li>
+        <li><strong>Timeline and milestones</strong> – When deliverables will be completed</li>
+        <li><strong>Payment terms and pricing</strong> – How much and when</li>
+        <li><strong>Deliverables</strong> – What you will receive</li>
+        <li><strong>Warranties and guarantees</strong> – Our commitments to you</li>
+      </ul>
+
+      <div class="highlight-box">
+        <p><strong>🔒 Our Guarantee:</strong> If we don't deliver the specific KPIs stated in your tier within 90 days, you can either <strong>cancel with zero penalties</strong> or get the next month <strong>free</strong>. No fine print tricks.</p>
+      </div>
+
+      <p>In the event of any conflict between these Terms & Conditions and a service agreement, the service agreement will take precedence.</p>
+
+      <!-- ===== SECTION 4 ===== -->
+      <h2 id="section4">4. Pricing and Payment</h2>
+
+      <h3>4.1 Pricing</h3>
+      <ul>
+        <li>All prices are in Nigerian Naira (₦) unless otherwise stated</li>
+        <li>Prices are subject to change with notice</li>
+        <li>Service agreements lock in pricing for their duration</li>
+        <li>Quotes are valid for 14 days from issue</li>
+      </ul>
+
+      <h3>4.2 Payment Terms</h3>
+      <ul>
+        <li><strong>Setup fees:</strong> One-time fees are due before work begins</li>
+        <li><strong>Monthly fees:</strong> Due on the first day of each month</li>
+        <li><strong>Late payments:</strong> May result in service suspension after 14 days of non-payment</li>
+        <li><strong>Reactivation:</strong> A reactivation fee may apply after suspension</li>
+      </ul>
+
+      <h3>4.3 Payment Methods</h3>
+      <p>We accept:</p>
+      <ul>
+        <li>Bank transfers</li>
+        <li>Card payments via Paystack</li>
+        <li>USSD payments</li>
+      </ul>
+      <p>All payments are processed securely. We do not store your payment card information.</p>
+
+      <h3>4.4 Taxes</h3>
+      <p>All fees are exclusive of applicable taxes. You are responsible for any taxes, duties, or levies associated with our services.</p>
+
+      <!-- ===== SECTION 5 ===== -->
+      <h2 id="section5">5. Intellectual Property</h2>
+
+      <h3>5.1 Ownership of Deliverables</h3>
+      <p>Upon final payment, you receive full ownership of all deliverables created specifically for your project. This includes:</p>
+      <ul>
+        <li>Source code and databases</li>
+        <li>Designs and graphics</li>
+        <li>Written content and copy</li>
+        <li>Brand assets and guidelines</li>
+      </ul>
+
+      <h3>5.2 Our Intellectual Property</h3>
+      <p>We retain ownership of our proprietary systems, frameworks, tools, and methodologies used in delivering services. You receive a license to use these as part of your deliverables. This includes:</p>
+      <ul>
+        <li>Internal code libraries and frameworks</li>
+        <li>Automation templates and workflows</li>
+        <li>Design systems and component libraries</li>
+      </ul>
+
+      <h3>5.3 Client Content</h3>
+      <p>You retain ownership of all content you provide. You grant us a license to use it for the purpose of delivering services. This license terminates upon project completion or termination.</p>
+
+      <!-- ===== SECTION 6 ===== -->
+      <h2 id="section6">6. Confidentiality</h2>
+      <p>We treat your business information as confidential. We will not share your data with third parties except as necessary to deliver services or as required by law.</p>
+      <p>Our obligations of confidentiality include:</p>
+      <ul>
+        <li>Business strategies and plans</li>
+        <li>Customer lists and data</li>
+        <li>Financial information</li>
+        <li>Proprietary processes and methods</li>
+        <li>Any information marked as confidential</li>
+      </ul>
+      <p>This obligation survives termination of our agreement.</p>
+
+      <!-- ===== SECTION 7 ===== -->
+      <h2 id="section7">7. Limitation of Liability</h2>
+      <ul>
+        <li><strong>No liability for indirect damages:</strong> We are not liable for loss of profits, revenue, data, or business interruption</li>
+        <li><strong>Maximum liability:</strong> Limited to the total fees paid for services in the preceding 3 months</li>
+        <li><strong>Force majeure:</strong> We are not liable for delays caused by events beyond our control (including but not limited to war, strikes, natural disasters, internet outages, or government actions)</li>
+        <li><strong>Third-party services:</strong> We are not liable for issues caused by third-party services (e.g., Google, social media platforms, hosting providers)</li>
+      </ul>
+
+      <!-- ===== SECTION 8 ===== -->
+      <h2 id="section8">8. Refund Policy</h2>
+      <ul>
+        <li><strong>Setup fees:</strong> Non-refundable as they cover work already performed during the discovery and setup phase</li>
+        <li><strong>Monthly fees:</strong> Refundable only if we fail to meet the guarantee terms stated in your service agreement</li>
+        <li><strong>Guarantee:</strong> If we don't meet KPIs (15% traffic/20% leads/3x ROAS), we provide a free month of service or allow cancellation with zero penalties</li>
+        <li><strong>No refunds for completed work:</strong> Work that has been delivered and approved is non-refundable</li>
+      </ul>
+
+      <!-- ===== SECTION 9 ===== -->
+      <h2 id="section9">9. Term and Termination</h2>
+      <ul>
+        <li><strong>Monthly agreements:</strong> Either party may terminate with 30 days written notice</li>
+        <li><strong>Project agreements:</strong> Terminated upon completion or breach</li>
+        <li><strong>Breach:</strong> We reserve the right to terminate services for non-payment or material breach of these terms</li>
+        <li><strong>Immediate termination:</strong> We may terminate immediately if you violate intellectual property rights or engage in illegal activity</li>
+      </ul>
+      <p>Upon termination, you will pay for all work completed up to the termination date. We will provide final deliverables upon receipt of payment.</p>
+
+      <!-- ===== SECTION 10 ===== -->
+      <h2 id="section10">10. Client Responsibilities</h2>
+      <p>You agree to:</p>
+      <ul>
+        <li>Provide timely access to information, decision-makers, and content</li>
+        <li>Provide all materials needed for project completion within agreed timelines</li>
+        <li>Review deliverables and provide feedback promptly</li>
+        <li>Ensure you have the rights to all content you provide</li>
+        <li>Maintain backups of your own data</li>
+        <li>Comply with all applicable laws and regulations</li>
+      </ul>
+
+      <h3>10.1 Delays Caused by Client</h3>
+      <p>If you cause delays by not fulfilling your responsibilities, we may adjust timelines and pricing accordingly. We will notify you of any such adjustments.</p>
+
+      <!-- ===== SECTION 11 ===== -->
+      <h2 id="section11">11. Warranties and Disclaimers</h2>
+      <ul>
+        <li><strong>Service performance:</strong> We deliver services with reasonable care and skill</li>
+        <li><strong>No guarantee of specific results:</strong> While we guarantee specific KPIs as stated in your service agreement, we do not guarantee specific ranking positions, sales figures, or revenue amounts</li>
+        <li><strong>Third-party services:</strong> We are not responsible for the performance of third-party services</li>
+        <li><strong>"As is" basis:</strong> Our website is provided "as is" without warranties of any kind</li>
+      </ul>
+
+      <!-- ===== SECTION 12 ===== -->
+      <h2 id="section12">12. Indemnification</h2>
+      <p>You agree to indemnify, defend, and hold harmless OneStack Digital Agency, its officers, directors, employees, and agents from any claims, damages, losses, or expenses arising from:</p>
+      <ul>
+        <li>Your use of our services</li>
+        <li>Violation of these terms</li>
+        <li>Infringement of intellectual property rights</li>
+        <li>Your content or materials</li>
+      </ul>
+
+      <!-- ===== SECTION 13 ===== -->
+      <h2 id="section13">13. Governing Law</h2>
+      <p>These terms are governed by the laws of the Federal Republic of Nigeria. Any disputes will be resolved in the courts of Lagos, Nigeria.</p>
+      <p>By using our services, you consent to the exclusive jurisdiction of Nigerian courts.</p>
+
+      <!-- ===== SECTION 14 ===== -->
+      <h2 id="section14">14. Changes to Terms</h2>
+      <p>We may update these terms periodically. We will notify you of significant changes via:</p>
+      <ul>
+        <li>Email notification</li>
+        <li>Website notice</li>
+        <li>Updated date at the top of this page</li>
+      </ul>
+      <p>Continued use of services after changes constitutes acceptance of updated terms.</p>
+
+      <!-- ===== SECTION 15 ===== -->
+      <h2 id="section15">15. Entire Agreement</h2>
+      <p>These terms, together with any service agreements, constitute the entire agreement between you and OneStack Digital Agency. They supersede all prior agreements, understandings, or representations.</p>
+
+      <!-- ===== SECTION 16 ===== -->
+      <h2 id="section16">16. Contact</h2>
+      <p>For questions about these terms, please contact us:</p>
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:oborimusa@gmail.com">oborimusa@gmail.com</a></li>
+        <li><strong>Phone:</strong> <a href="tel:+2348039661354">+234 803 966 1354</a></li>
+        <li><strong>Address:</strong> Osogbo, Osun State, Nigeria</li>
+      </ul>
+
+      <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--gray-200); text-align: center; color: var(--gray-600); font-size: 0.9rem;">
+        <p><strong>OneStack Digital Agency</strong> — Complete Digital Ecosystem. Built in Nigeria for African businesses.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>© 2026 OneStackDA. Built with <span style="color: #f5a623;">☕</span> and zero BS.</p>
+    <p style="font-size: 0.8rem; margin-top: 5px;">
+        Lagos, Nigeria | 
+        <a href="mailto:hello@onestackda.com" style="color: #f5a623; text-decoration: none;">hello@onestackda.com</a> |
+        <a href="/privacy-policy.html" style="color: #666; text-decoration: none;">Privacy</a> |
+        <a href="/terms-conditions.html" style="color: #666; text-decoration: none;">Terms</a>
+    </p>
+</footer>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script>
+    // Mobile menu toggle
+    const toggle = document.getElementById('mobileMenu');
+    const nav = document.getElementById('navList');
+
+    if (toggle && nav) {
+      toggle.addEventListener('click', () => {
+        nav.classList.toggle('active');
+      });
+
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('active');
+        });
+      });
+    }
+  </script>
+
+</body>
+</html>
