@@ -1,782 +1,1218 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, user-scalable=yes"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
 
     <!-- ===== FAVICON ===== -->
     <link rel="icon" type="image/svg+xml" href="image/favicon.svg" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="image/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="image/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="image/favicon-16x16.png"
-    />
+    <link rel="apple-touch-icon" sizes="180x180" href="image/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="image/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="image/favicon-16x16.png" />
 
     <!-- ===== SEO ===== -->
-    <title>
-      OneStackDA – No Hype. Just Hard Work. | Digital Agency for Nigerian SMEs
-    </title>
-    <meta
-      name="description"
-      content="We build custom websites, apps, and logins for Nigerian SMEs. Google Ads, AI automation, and hotel management systems. No middlemen. Direct dev access."
-    />
-    <meta
-      name="keywords"
-      content="OneStackDA, digital agency Nigeria, web design Lagos, Google Ads, hotel management app, SME solutions"
-    />
+    <title>OneStackDA – Digital Agency for Nigerian SMEs | Web Design Osogbo</title>
+    <meta name="description" content="OneStackDA builds custom websites, Google Ads, and booking systems for Nigerian SMEs. We built Garuth Properties and Bouncer Protocol from scratch. Based in Osogbo, Nigeria." />
+    <meta name="keywords" content="OneStackDA, digital agency Nigeria, web design Osogbo, Google Ads Nigeria, SME solutions, Garuth Properties, Bouncer Protocol" />
     <meta name="author" content="OneStackDA" />
+    <link rel="canonical" href="https://onestackda.com/" />
 
     <!-- ===== OPEN GRAPH ===== -->
-    <meta
-      property="og:title"
-      content="OneStackDA – Digital Agency for Nigerian SMEs"
-    />
-    <meta
-      property="og:description"
-      content="We build websites, apps, and logins that actually work. Trusted by Jobpitality, 4T Luxury Hotel, and more."
-    />
+    <meta property="og:title" content="OneStackDA – Digital Agency for Nigerian SMEs | Web Design Osogbo" />
+    <meta property="og:description" content="We build custom websites, apps, and logins that actually work. Recent projects: Garuth Properties, Bouncer Protocol, Jobpitality, and more." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://onestackda.com/" />
 
     <!-- ===== FONT AWESOME ===== -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        background: #0a0a0a;
-        color: #e0e0e0;
-        display: flex;
-        justify-content: center;
-        padding: 20px;
-      }
-
-      .container {
-        max-width: 1200px;
-        width: 100%;
-      }
-
-      /* ===== HEADER RESPONSIVE ===== */
-      .header-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px 30px;
-        border-bottom: 1px solid #222;
-        flex-wrap: wrap;
-      }
-
-      header .logo {
-        font-size: 1.8rem;
-        font-weight: 800;
-        color: #fff;
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        height: 50px;
-      }
-
-      header .logo span {
-        color: #f5a623;
-      }
-
-      header nav {
-        display: flex;
-        gap: 25px;
-        align-items: center;
-      }
-
-      header nav a {
-        color: #aaa;
-        text-decoration: none;
-        font-weight: 500;
-        transition: color 0.3s ease;
-      }
-
-      header nav a:hover {
-        color: #fff;
-      }
-
-      header nav a.cta-nav {
-        color: #f5a623;
-        font-weight: 700;
-      }
-
-      .hamburger {
-        display: none;
-        background: none;
-        border: none;
-        color: #fff;
-        font-size: 1.8rem;
-        cursor: pointer;
-        padding: 5px 10px;
-        z-index: 100;
-      }
-
-      .hamburger:hover {
-        color: #f5a623;
-      }
-
-      /* ===== HERO ===== */
-      .hero {
-        text-align: center;
-        padding: 60px 20px 40px;
-        border-bottom: 1px solid #222;
-      }
-
-      .hero .badge {
-        display: inline-block;
-        background: #2a2a2a;
-        color: #f5a623;
-        padding: 6px 18px;
-        border-radius: 30px;
-        font-size: 0.8rem;
-        font-weight: 700;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        border: 1px solid #333;
-        margin-bottom: 20px;
-      }
-
-      .hero h1 {
-        font-size: 3rem;
-        font-weight: 800;
-        background: linear-gradient(135deg, #ffffff 0%, #a0a0a0 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        line-height: 1.2;
-        margin-bottom: 20px;
-      }
-
-      .hero .highlight {
-        color: #f5a623;
-        -webkit-text-fill-color: #f5a623;
-      }
-
-      .hero p {
-        font-size: 1.2rem;
-        color: #a0a0a0;
-        max-width: 700px;
-        margin: 0 auto 30px;
-        line-height: 1.6;
-      }
-
-      .cta-btn {
-        background: #f5a623;
-        color: #0a0a0a;
-        padding: 16px 40px;
-        border: none;
-        border-radius: 50px;
-        font-size: 1rem;
-        font-weight: 700;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        text-decoration: none;
-        display: inline-block;
-      }
-
-      .cta-btn:hover {
-        transform: scale(1.05);
-        background: #ffb84d;
-        box-shadow: 0 10px 30px rgba(245, 166, 35, 0.3);
-      }
-
-      /* ===== TRUSTED BY ===== */
-      .trusted-section {
-        padding: 40px 20px;
-        text-align: center;
-        border-bottom: 1px solid #222;
-      }
-
-      .trusted-section h2 {
-        font-size: 1.2rem;
-        color: #666;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-        margin-bottom: 30px;
-        font-weight: 400;
-      }
-
-      .client-grid {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 40px 60px;
-      }
-
-      .client-item {
-        font-size: 1.2rem;
-        font-weight: 600;
-        color: #aaa;
-        border: 1px solid #222;
-        padding: 12px 25px;
-        border-radius: 40px;
-        background: #111;
-        transition: all 0.3s ease;
-        letter-spacing: 0.5px;
-      }
-
-      .client-item:hover {
-        border-color: #f5a623;
-        color: #fff;
-        background: #1a1a1a;
-      }
-
-      .client-item .fa-check-circle {
-        color: #f5a623;
-        margin-right: 8px;
-        font-size: 0.9rem;
-      }
-
-      /* ===== PROMISE GRID ===== */
-      .promise-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 30px;
-        padding: 60px 20px;
-      }
-
-      .promise-card {
-        background: #141414;
-        padding: 40px 25px;
-        border-radius: 16px;
-        border: 1px solid #222;
-        transition: all 0.3s ease;
-        text-align: left;
-      }
-
-      .promise-card:hover {
-        border-color: #f5a623;
-        transform: translateY(-5px);
-        background: #1a1a1a;
-      }
-
-      .promise-card .icon {
-        font-size: 2.5rem;
-        color: #f5a623;
-        margin-bottom: 20px;
-        display: block;
-      }
-
-      .promise-card h3 {
-        font-size: 1.4rem;
-        margin-bottom: 15px;
-        color: #fff;
-      }
-
-      .promise-card p {
-        color: #b0b0b0;
-        line-height: 1.7;
-        font-size: 0.95rem;
-      }
-
-      .promise-card .tag {
-        display: inline-block;
-        margin-top: 15px;
-        font-size: 0.8rem;
-        font-weight: 600;
-        color: #f5a623;
-        border-bottom: 2px solid #f5a623;
-        padding-bottom: 2px;
-      }
-
-      /* ===== HONEST METRICS ===== */
-      .honest-metrics {
-        background: #111;
-        border-radius: 20px;
-        padding: 40px 30px;
-        margin: 30px 20px;
-        border: 1px solid #2a2a2a;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: center;
-        gap: 20px;
-      }
-
-      .metric-item {
-        text-align: center;
-      }
-
-      .metric-item .number {
-        font-size: 2.8rem;
-        font-weight: 800;
-        color: #fff;
-        display: block;
-        line-height: 1;
-      }
-
-      .metric-item .label {
-        font-size: 0.9rem;
-        color: #888;
-        margin-top: 8px;
-        letter-spacing: 0.5px;
-      }
-
-      .metric-item .label i {
-        color: #f5a623;
-        margin-right: 5px;
-      }
-
-      /* ===== OFFER BANNER ===== */
-      .offer-banner {
-        background: linear-gradient(135deg, #1a1205 0%, #0a0a0a 100%);
-        border: 2px solid #f5a623;
-        border-radius: 20px;
-        padding: 50px 30px;
-        margin: 40px 20px;
-        text-align: center;
-        position: relative;
-        overflow: hidden;
-      }
-
-      .offer-banner::before {
-        content: "AUDIT";
-        position: absolute;
-        right: -40px;
-        top: -30px;
-        font-size: 8rem;
-        font-weight: 900;
-        color: rgba(245, 166, 35, 0.04);
-        pointer-events: none;
-        transform: rotate(15deg);
-      }
-
-      .offer-banner h2 {
-        font-size: 2.2rem;
-        font-weight: 700;
-        color: #fff;
-        margin-bottom: 15px;
-      }
-
-      .offer-banner h2 span {
-        color: #f5a623;
-      }
-
-      .offer-banner p {
-        max-width: 600px;
-        margin: 0 auto 25px;
-        color: #b0b0b0;
-        font-size: 1.1rem;
-        line-height: 1.6;
-      }
-
-      .small-note {
-        font-size: 0.8rem;
-        color: #666;
-        margin-top: 15px;
-      }
-
-      /* ===== FOOTER ===== */
-      footer {
-        text-align: center;
-        padding: 40px 20px;
-        border-top: 1px solid #222;
-        margin-top: 40px;
-        color: #666;
-        font-size: 0.9rem;
-      }
-
-      footer a {
-        color: #f5a623;
-        text-decoration: none;
-      }
-
-      footer a:hover {
-        text-decoration: underline;
-      }
-
-      /* ===== RESPONSIVE ===== */
-      @media (max-width: 768px) {
-        .header-container {
-          flex-wrap: nowrap;
-          padding: 15px 20px;
+        /* ────────────── RESET & BASE ────────────── */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        .hamburger {
-          display: block;
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        /* ────────────── HEADER ────────────── */
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 30px;
+            border-bottom: 1px solid #222;
+            flex-wrap: wrap;
+            position: relative;
+        }
+
+        header .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #fff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            height: 50px;
+        }
+
+        header .logo svg {
+            height: 45px;
+            vertical-align: middle;
         }
 
         header nav {
-          display: none;
-          flex-direction: column;
-          width: 100%;
-          background: #0a0a0a;
-          padding: 20px 0;
-          border-top: 1px solid #222;
-          gap: 15px;
-          align-items: center;
-          position: absolute;
-          top: 80px;
-          left: 0;
-          right: 0;
-          z-index: 99;
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
-        }
-
-        header nav.open {
-          display: flex;
+            display: flex;
+            gap: 25px;
+            align-items: center;
         }
 
         header nav a {
-          font-size: 1.1rem;
-          padding: 8px 0;
+            color: #aaa;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            font-size: 15px;
         }
 
-        .header-container {
-          flex-wrap: wrap;
-          position: relative;
+        header nav a:hover {
+            color: #fff;
+        }
+
+        header nav a.cta-nav {
+            color: #f5a623;
+            font-weight: 700;
+        }
+
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 1.8rem;
+            cursor: pointer;
+            padding: 5px 10px;
+            z-index: 100;
+        }
+
+        .hamburger:hover {
+            color: #f5a623;
+        }
+
+        /* ────────────── HERO ────────────── */
+        .hero {
+            text-align: center;
+            padding: 60px 20px 40px;
+            border-bottom: 1px solid #222;
+        }
+
+        .hero .badge {
+            display: inline-block;
+            background: #2a2a2a;
+            color: #f5a623;
+            padding: 6px 18px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border: 1px solid #333;
+            margin-bottom: 20px;
+        }
+
+        .hero .badge i {
+            margin-right: 8px;
         }
 
         .hero h1 {
-          font-size: 2.2rem;
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #ffffff 0%, #a0a0a0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+            margin-bottom: 20px;
         }
-        .hero p {
-          font-size: 1rem;
-        }
-        .offer-banner h2 {
-          font-size: 1.6rem;
-        }
-        .metric-item .number {
-          font-size: 2rem;
-        }
-        .honest-metrics {
-          flex-direction: column;
-          gap: 30px;
-        }
-        .client-grid {
-          gap: 15px;
-        }
-        .client-item {
-          font-size: 0.9rem;
-          padding: 8px 16px;
-        }
-      }
 
-      @media (max-width: 480px) {
-        .header-container {
-          padding: 10px 15px;
+        .hero .highlight {
+            color: #f5a623;
+            -webkit-text-fill-color: #f5a623;
         }
-        header .logo svg {
-          height: 35px;
-        }
-        .hero h1 {
-          font-size: 1.8rem;
-        }
+
         .hero p {
-          font-size: 0.95rem;
+            font-size: 1.2rem;
+            color: #a0a0a0;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            line-height: 1.6;
         }
+
+        .hero p strong {
+            color: #f5a623;
+        }
+
         .cta-btn {
-          padding: 14px 28px;
-          font-size: 0.9rem;
+            background: #f5a623;
+            color: #0a0a0a;
+            padding: 16px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
         }
-        .offer-banner {
-          padding: 30px 20px;
+
+        .cta-btn:hover {
+            transform: scale(1.05);
+            background: #ffb84d;
+            box-shadow: 0 10px 30px rgba(245, 166, 35, 0.3);
         }
-        .offer-banner h2 {
-          font-size: 1.3rem;
+
+        .cta-btn i {
+            margin-right: 10px;
         }
+
+        /* ────────────── TRUSTED BY / RECENT PROJECTS ────────────── */
+        .trusted-section {
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 1px solid #222;
+        }
+
+        .trusted-section h2 {
+            font-size: 1.2rem;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+
+        .client-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px 30px;
+        }
+
+        .client-item {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #aaa;
+            border: 1px solid #222;
+            padding: 10px 22px;
+            border-radius: 40px;
+            background: #111;
+            transition: all 0.3s ease;
+            letter-spacing: 0.5px;
+        }
+
+        .client-item:hover {
+            border-color: #f5a623;
+            color: #fff;
+            background: #1a1a1a;
+        }
+
+        .client-item .fa-check-circle {
+            color: #f5a623;
+            margin-right: 8px;
+            font-size: 0.9rem;
+        }
+
+        .trusted-section .note {
+            color: #8b8b8b;
+            font-size: 0.9rem;
+            margin-top: 25px;
+        }
+
+        /* ────────────── PROMISE GRID ────────────── */
         .promise-grid {
-          padding: 30px 10px;
-          gap: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 60px 20px;
         }
+
         .promise-card {
-          padding: 25px 18px;
+            background: #141414;
+            padding: 40px 25px;
+            border-radius: 16px;
+            border: 1px solid #222;
+            transition: all 0.3s ease;
+            text-align: left;
         }
+
+        .promise-card:hover {
+            border-color: #f5a623;
+            transform: translateY(-5px);
+            background: #1a1a1a;
+        }
+
+        .promise-card .icon {
+            font-size: 2.5rem;
+            color: #f5a623;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .promise-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .promise-card p {
+            color: #b0b0b0;
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        .promise-card .tag {
+            display: inline-block;
+            margin-top: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #f5a623;
+            border-bottom: 2px solid #f5a623;
+            padding-bottom: 2px;
+        }
+
+        /* ────────────── PORTFOLIO SECTION ────────────── */
+        .portfolio-section {
+            padding: 60px 20px;
+            border-bottom: 1px solid #222;
+        }
+
+        .portfolio-section .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .portfolio-section .section-header h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+
+        .portfolio-section .section-header h2 span {
+            color: #f5a623;
+        }
+
+        .portfolio-section .section-header p {
+            color: #888;
+            font-size: 1rem;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .portfolio-card {
+            background: #141414;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #222;
+            transition: all 0.3s ease;
+        }
+
+        .portfolio-card:hover {
+            border-color: #f5a623;
+            transform: translateY(-5px);
+            background: #1a1a1a;
+        }
+
+        .portfolio-card .image-placeholder {
+            height: 180px;
+            background: #1a1a1a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid #222;
+            color: #555;
+            font-size: 3rem;
+        }
+
+        .portfolio-card .image-placeholder i {
+            opacity: 0.3;
+        }
+
+        .portfolio-card .body {
+            padding: 25px;
+        }
+
+        .portfolio-card .body .tag {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #f5a623;
+            background: rgba(245, 166, 35, 0.1);
+            padding: 4px 12px;
+            border-radius: 30px;
+            border: 1px solid rgba(245, 166, 35, 0.15);
+            margin-bottom: 10px;
+        }
+
+        .portfolio-card .body h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+
+        .portfolio-card .body p {
+            color: #b0b0b0;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+
+        .portfolio-card .body .view-link {
+            color: #f5a623;
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .portfolio-card .body .view-link:hover {
+            color: #ffb84d;
+        }
+
+        .portfolio-card .body .view-link i {
+            margin-left: 6px;
+        }
+
+        /* ────────────── WHY CHOOSE US ────────────── */
+        .why-choose-section {
+            padding: 60px 20px;
+            border-bottom: 1px solid #222;
+        }
+
+        .why-choose-section .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .why-choose-section .section-header h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+
+        .why-choose-section .section-header h2 span {
+            color: #f5a623;
+        }
+
+        .why-choose-section .section-header p {
+            color: #888;
+            font-size: 1rem;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 24px;
+        }
+
+        .why-card {
+            background: #141414;
+            padding: 30px 20px;
+            border-radius: 16px;
+            border: 1px solid #222;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .why-card:hover {
+            border-color: #f5a623;
+            transform: translateY(-4px);
+            background: #1a1a1a;
+        }
+
+        .why-card i {
+            font-size: 2.2rem;
+            color: #f5a623;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .why-card h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+
+        .why-card p {
+            font-size: 0.9rem;
+            color: #b0b0b0;
+            line-height: 1.6;
+        }
+
+        /* ────────────── HONEST METRICS ────────────── */
         .honest-metrics {
-          padding: 25px 15px;
-          margin: 20px 10px;
+            background: #111;
+            border-radius: 20px;
+            padding: 40px 30px;
+            margin: 30px 20px;
+            border: 1px solid #2a2a2a;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            gap: 20px;
         }
-      }
+
+        .metric-item {
+            text-align: center;
+        }
+
+        .metric-item .number {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: #fff;
+            display: block;
+            line-height: 1;
+        }
+
+        .metric-item .label {
+            font-size: 0.9rem;
+            color: #888;
+            margin-top: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        .metric-item .label i {
+            color: #f5a623;
+            margin-right: 5px;
+        }
+
+        /* ────────────── BLOG SECTION ────────────── */
+        .blog-section {
+            padding: 60px 20px;
+            border-bottom: 1px solid #222;
+        }
+
+        .blog-section .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .blog-section .section-header h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+
+        .blog-section .section-header h2 span {
+            color: #f5a623;
+        }
+
+        .blog-section .section-header p {
+            color: #888;
+            font-size: 1rem;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .blog-card {
+            background: #141414;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #222;
+            transition: all 0.3s ease;
+        }
+
+        .blog-card:hover {
+            border-color: #f5a623;
+            transform: translateY(-5px);
+            background: #1a1a1a;
+        }
+
+        .blog-card .image-placeholder {
+            height: 180px;
+            background: #1a1a1a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid #222;
+            color: #555;
+            font-size: 3rem;
+        }
+
+        .blog-card .image-placeholder i {
+            opacity: 0.3;
+        }
+
+        .blog-card .body {
+            padding: 25px;
+        }
+
+        .blog-card .body .tag {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #f5a623;
+            background: rgba(245, 166, 35, 0.1);
+            padding: 4px 12px;
+            border-radius: 30px;
+            border: 1px solid rgba(245, 166, 35, 0.15);
+            margin-bottom: 10px;
+        }
+
+        .blog-card .body h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+
+        .blog-card .body h3 a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .blog-card .body h3 a:hover {
+            color: #f5a623;
+        }
+
+        .blog-card .body p {
+            color: #b0b0b0;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .blog-card .body .meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #666;
+            font-size: 0.8rem;
+            border-top: 1px solid #222;
+            padding-top: 15px;
+        }
+
+        .blog-card .body .meta .author {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .blog-card .body .meta .author i {
+            color: #f5a623;
+        }
+
+        .blog-card .body .meta .read-more {
+            color: #f5a623;
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .blog-card .body .meta .read-more:hover {
+            color: #ffb84d;
+        }
+
+        /* ────────────── OFFER BANNER ────────────── */
+        .offer-banner {
+            background: linear-gradient(135deg, #1a1205 0%, #0a0a0a 100%);
+            border: 2px solid #f5a623;
+            border-radius: 20px;
+            padding: 50px 30px;
+            margin: 40px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .offer-banner::before {
+            content: "AUDIT";
+            position: absolute;
+            right: -40px;
+            top: -30px;
+            font-size: 8rem;
+            font-weight: 900;
+            color: rgba(245, 166, 35, 0.04);
+            pointer-events: none;
+            transform: rotate(15deg);
+        }
+
+        .offer-banner h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .offer-banner h2 span {
+            color: #f5a623;
+        }
+
+        .offer-banner p {
+            max-width: 600px;
+            margin: 0 auto 25px;
+            color: #b0b0b0;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .offer-banner .cta-btn {
+            background: #fff;
+            color: #0a0a0a;
+        }
+
+        .offer-banner .cta-btn:hover {
+            background: #f5a623;
+            color: #0a0a0a;
+        }
+
+        .small-note {
+            font-size: 0.8rem;
+            color: #666;
+            margin-top: 15px;
+        }
+
+        /* ────────────── FOOTER ────────────── */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid #222;
+            margin-top: 40px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #f5a623;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        footer .footer-links {
+            font-size: 0.8rem;
+            margin-top: 5px;
+        }
+
+        footer .footer-links a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        footer .footer-links a:hover {
+            color: #f5a623;
+            text-decoration: underline;
+        }
+
+        /* ────────────── RESPONSIVE ────────────── */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-wrap: nowrap;
+                padding: 15px 20px;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            header nav {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background: #0a0a0a;
+                padding: 20px 0;
+                border-top: 1px solid #222;
+                gap: 15px;
+                align-items: center;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                right: 0;
+                z-index: 99;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+            }
+
+            header nav.open {
+                display: flex;
+            }
+
+            header nav a {
+                font-size: 1.1rem;
+                padding: 8px 0;
+            }
+
+            .header-container {
+                flex-wrap: wrap;
+                position: relative;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+            .offer-banner h2 {
+                font-size: 1.6rem;
+            }
+            .metric-item .number {
+                font-size: 2rem;
+            }
+            .honest-metrics {
+                flex-direction: column;
+                gap: 30px;
+            }
+            .client-grid {
+                gap: 12px;
+            }
+            .client-item {
+                font-size: 0.85rem;
+                padding: 6px 14px;
+            }
+            header .logo svg {
+                height: 35px;
+            }
+            .blog-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .blog-card .image-placeholder {
+                height: 140px;
+            }
+            .portfolio-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .portfolio-card .image-placeholder {
+                height: 140px;
+            }
+            .why-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-container {
+                padding: 10px 15px;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .hero p {
+                font-size: 0.95rem;
+            }
+            .cta-btn {
+                padding: 14px 28px;
+                font-size: 0.9rem;
+            }
+            .offer-banner {
+                padding: 30px 20px;
+            }
+            .offer-banner h2 {
+                font-size: 1.3rem;
+            }
+            .promise-grid {
+                padding: 30px 10px;
+                gap: 20px;
+            }
+            .promise-card {
+                padding: 25px 18px;
+            }
+            .honest-metrics {
+                padding: 25px 15px;
+                margin: 20px 10px;
+            }
+            header .logo svg {
+                height: 30px;
+            }
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+            .blog-card .image-placeholder {
+                height: 120px;
+            }
+            .blog-section .section-header h2 {
+                font-size: 1.6rem;
+            }
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+            .portfolio-card .image-placeholder {
+                height: 120px;
+            }
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+            .why-choose-section .section-header h2 {
+                font-size: 1.6rem;
+            }
+            .client-grid {
+                gap: 8px;
+            }
+            .client-item {
+                font-size: 0.75rem;
+                padding: 4px 10px;
+                border-radius: 30px;
+            }
+        }
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <div class="container">
-      <!-- ===== HEADER ===== -->
-      <header>
-        <div class="header-container">
-          <a href="/" class="logo">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 400 120"
-              height="45"
-              style="vertical-align: middle"
-            >
-              <!-- Top Block -->
-              <rect
-                x="10"
-                y="15"
-                width="55"
-                height="22"
-                rx="6"
-                fill="#f5a623"
-              />
-              <!-- Middle Block -->
-              <rect
-                x="25"
-                y="49"
-                width="55"
-                height="22"
-                rx="6"
-                fill="#f5a623"
-                opacity="0.85"
-              />
-              <!-- Bottom Block -->
-              <rect
-                x="10"
-                y="83"
-                width="55"
-                height="22"
-                rx="6"
-                fill="#f5a623"
-                opacity="0.7"
-              />
-              <!-- "ONE" in White -->
-              <text
-                x="90"
-                y="62"
-                font-family="'Segoe UI', Arial, sans-serif"
-                font-weight="800"
-                font-size="42"
-                fill="#ffffff"
-                letter-spacing="1"
-              >
-                ONE
-              </text>
-              <!-- "STACK" in Gold -->
-              <text
-                x="182"
-                y="62"
-                font-family="'Segoe UI', Arial, sans-serif"
-                font-weight="800"
-                font-size="42"
-                fill="#f5a623"
-                letter-spacing="1"
-              >
-                STACK
-              </text>
-              <!-- "DA" in Grey -->
-              <text
-                x="325"
-                y="62"
-                font-family="'Segoe UI', Arial, sans-serif"
-                font-weight="700"
-                font-size="24"
-                fill="#888888"
-                letter-spacing="1"
-              >
-                DA
-              </text>
-            </svg>
-          </a>
 
-          <button
-            class="hamburger"
-            id="hamburger"
-            aria-label="Toggle navigation menu"
-            aria-expanded="false"
-          >
-            <i class="fas fa-bars"></i>
-          </button>
+        <!-- ===== HEADER ===== -->
+        <header>
+            <div class="header-container">
+                <a href="/" class="logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" height="45" style="vertical-align: middle">
+                        <rect x="10" y="15" width="55" height="22" rx="6" fill="#f5a623" />
+                        <rect x="25" y="49" width="55" height="22" rx="6" fill="#f5a623" opacity="0.85" />
+                        <rect x="10" y="83" width="55" height="22" rx="6" fill="#f5a623" opacity="0.7" />
+                        <text x="90" y="62" font-family="'Segoe UI', Arial, sans-serif" font-weight="800" font-size="42" fill="#ffffff" letter-spacing="1">ONE</text>
+                        <text x="182" y="62" font-family="'Segoe UI', Arial, sans-serif" font-weight="800" font-size="42" fill="#f5a623" letter-spacing="1">STACK</text>
+                        <text x="325" y="62" font-family="'Segoe UI', Arial, sans-serif" font-weight="700" font-size="24" fill="#888888" letter-spacing="1">DA</text>
+                    </svg>
+                </a>
 
-          <nav id="nav-menu" role="navigation" aria-label="Main navigation">
-            <a href="/" class="cta-nav">Home</a>
-            <a href="/services.html">Services</a>
-            <a href="/contact.html">Contact</a>
-            <a href="/promo.html">Promo</a>
-          </nav>
-        </div>
-      </header>
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                </button>
 
-      <!-- ===== HERO ===== -->
-      <section class="hero">
-        <div class="badge">
-          <i class="fas fa-bolt" style="margin-right: 8px"></i> TRUSTED BY REAL
-          NIGERIAN BRANDS
-        </div>
-        <h1>Launch Your <span class="highlight">Digital Presence</span></h1>
-        <p class="subtitle">
-          Build. Scale. Dominate.<br />
-          <strong>Websites, Booking Systems & Ads That Deliver.</strong>
-        </p>
-        <a href="https://wa.me/2348039661354" class="cta-btn">
-          <i class="fas fa-rocket" style="margin-right: 10px"></i> Launch Your
-          Project
-        </a>
-      </section>
+                <nav id="nav-menu" role="navigation" aria-label="Main navigation">
+                    <a href="/" class="cta-nav">Home</a>
+                    <a href="/services.html">Services</a>
+                    <a href="/blog.html">Blog</a>
+                    <a href="/contact.html">Contact</a>
+                    <a href="/promo.html">Promo</a>
+                </nav>
+            </div>
+        </header>
 
-      <!-- ===== TRUSTED BY ===== -->
-      <section class="trusted-section">
-        <h2>Recent Projects</h2>
-        <div class="client-grid">
-          <span class="client-item"
-            ><i class="fas fa-check-circle"></i> Jobpitality</span
-          >
-          <span class="client-item"
-            ><i class="fas fa-check-circle"></i> Drecot Consults</span
-          >
-          <span class="client-item"
-            ><i class="fas fa-check-circle"></i> T Data Connect</span
-          >
-          <span class="client-item"
-            ><i class="fas fa-check-circle"></i> Buffet On Travels</span
-          >
-          <span class="client-item"
-            ><i class="fas fa-check-circle"></i> 4T Luxury Hotel</span
-          >
-        </div>
-        <p style="color: #8b8b8b; font-size: 0.9rem; margin-top: 25px">
-          *Websites, login systems, hotel management apps, and ad management for
-          these brands.
-        </p>
-      </section>
+        <!-- ===== HERO ===== -->
+        <section class="hero">
+            <div class="badge">
+                <i class="fas fa-bolt"></i> TRUSTED BY NIGERIAN BRANDS
+            </div>
+            <h1>Digital Agency for <span class="highlight">Nigerian SMEs</span></h1>
+            <p>
+                Web design, Google Ads &amp; booking systems that deliver real results.<br />
+                <strong>Based in Osogbo – serving Nigeria and beyond.</strong>
+            </p>
+            <a href="https://wa.me/2348039661354" class="cta-btn">
+                <i class="fas fa-rocket"></i> Launch Your Project
+            </a>
+        </section>
 
-      <!-- ===== PROMISE GRID ===== -->
-      <div class="promise-grid">
-        <div class="promise-card">
-          <span class="icon"><i class="fas fa-laptop-code"></i></span>
-          <h3>Custom Websites & Apps</h3>
-          <p>
-            From corporate websites and hotel management systems to secure user
-            login dashboards. We build clean, fast systems tailored for Nigerian
-            SMEs and hospitality businesses.
-          </p>
-          <span class="tag">Built for Travel, Tech & Hospitality</span>
+        <!-- ===== RECENT PROJECTS ===== -->
+        <section class="trusted-section">
+            <h2>Recent Projects</h2>
+            <div class="client-grid">
+                <span class="client-item"><i class="fas fa-check-circle"></i> Garuth Properties</span>
+                <span class="client-item"><i class="fas fa-check-circle"></i> Bouncer Protocol</span>
+                <span class="client-item"><i class="fas fa-check-circle"></i> HospitalityRecruit</span>
+                <span class="client-item"><i class="fas fa-check-circle"></i> Drecot Consults</span>
+                <span class="client-item"><i class="fas fa-check-circle"></i> 4T Luxury Hotel</span>
+            </div>
+            <p class="note">
+                * Custom websites, booking systems, hotel management apps, and ad management for these brands.
+            </p>
+        </section>
+
+        <!-- ===== PROMISE GRID ===== -->
+        <div class="promise-grid">
+            <div class="promise-card">
+                <span class="icon"><i class="fas fa-laptop-code"></i></span>
+                <h3>Custom Websites &amp; Apps</h3>
+                <p>
+                    From corporate websites and hotel management systems to secure user
+                    login dashboards. We build clean, fast systems tailored for Nigerian
+                    SMEs and hospitality businesses across Osogbo, Lagos, Abuja, and beyond.
+                </p>
+                <span class="tag">Built for Nigerian Businesses</span>
+            </div>
+
+            <div class="promise-card">
+                <span class="icon"><i class="fas fa-chart-line"></i></span>
+                <h3>Google &amp; Social Ads</h3>
+                <p>
+                    Google Ads &amp; Social Media ads managed by someone who tracks every kobo.
+                    We specialize in getting ROI for Nigerian service-based businesses.
+                </p>
+                <span class="tag">Ad Spend Specialist</span>
+            </div>
+
+            <div class="promise-card">
+                <span class="icon"><i class="fas fa-user-tie"></i></span>
+                <h3>Direct Access – No Middlemen</h3>
+                <p>
+                    No account managers. You talk directly to the developer who built
+                    Jobpitality, Buffet On Travels &amp; 4T Luxury Hotel. Real-time updates,
+                    zero gatekeeping.
+                </p>
+                <span class="tag">Talk to the Dev</span>
+            </div>
         </div>
 
-        <div class="promise-card">
-          <span class="icon"><i class="fas fa-chart-line"></i></span>
-          <h3>Digital Advertising</h3>
-          <p>
-            Google & Social Media ads managed by someone who tracks every kobo.
-            We specialize in getting ROI for service-based businesses.
-          </p>
-          <span class="tag">Ad Spend Specialist</span>
+        <!-- ===== PORTFOLIO SHOWCASE ===== -->
+        <section class="portfolio-section">
+            <div class="section-header">
+                <h2>Projects Built <span>From Scratch</span></h2>
+                <p>Real websites delivered to real Nigerian brands.</p>
+            </div>
+
+            <div class="portfolio-grid">
+
+                <!-- Garuth Properties -->
+                <div class="portfolio-card">
+                    <div class="image-placeholder">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="body">
+                        <span class="tag">Real Estate</span>
+                        <h3>Daruth Properties</h3>
+                        <p>Full property listing website with booking system and contact forms. Built from scratch in 2 weeks.</p>
+                        <a href="https://daruthproperties.netlify.app/" target="_blank" class="view-link">
+                            View Site <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Bouncer Protocol -->
+                <div class="portfolio-card">
+                    <div class="image-placeholder">
+                        <i class="fas fa-shield-halved"></i>
+                    </div>
+                    <div class="body">
+                        <span class="tag">Security</span>
+                        <h3>Bouncer Protocol</h3>
+                        <p>Professional security company website with service listings, booking system, and contact forms. Built from scratch.</p>
+                        <a href="https://bouncerprotocol.netlify.app/" target="_blank" class="view-link">
+                            View Site <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- hospitalityrecruit -->
+                <div class="portfolio-card">
+                    <div class="image-placeholder">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="body">
+                        <span class="tag">Recruitment</span>
+                        <h3>HospitalityRecruit</h3>
+                        <p>Hospitality recruitment platform with job listings, candidate applications, and admin dashboard.</p>
+                        <a href="https://hospitalityrecruit.netlify.app/" class="view-link">
+                            View Site <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===== WHY CHOOSE US ===== -->
+        <section class="why-choose-section">
+            <div class="section-header">
+                <h2>Why Work with <span>OneStackDA</span></h2>
+                <p>We're local, professional, and committed to your growth.</p>
+            </div>
+
+            <div class="why-grid">
+                <div class="why-card">
+                    <i class="fas fa-map-pin"></i>
+                    <h4>Osogbo-Based</h4>
+                    <p>We're local – you can meet us face-to-face. No Lagos overhead, same professional quality.</p>
+                </div>
+
+                <div class="why-card">
+                    <i class="fas fa-rocket"></i>
+                    <h4>Fast Delivery</h4>
+                    <p>We deliver projects on time and on budget. No delays, no excuses.</p>
+                </div>
+
+                <div class="why-card">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h4>Ongoing Support</h4>
+                    <p>We don't just build and leave. We're with you every step of the way.</p>
+                </div>
+
+                <div class="why-card">
+                    <i class="fas fa-medal"></i>
+                    <h4>Proven Results</h4>
+                    <p>Our clients have seen real growth – increased bookings, more sales, and better visibility.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== HONEST METRICS ===== -->
+        <div class="honest-metrics">
+            <div class="metric-item">
+                <span class="number">5+</span>
+                <span class="label"><i class="fas fa-briefcase"></i> Active Projects</span>
+            </div>
+            <div class="metric-item">
+                <span class="number">100%</span>
+                <span class="label"><i class="fas fa-code"></i> Custom Coded</span>
+            </div>
+            <div class="metric-item">
+                <span class="number">2hrs</span>
+                <span class="label"><i class="fas fa-clock"></i> Avg. Response Time</span>
+            </div>
+            <div class="metric-item">
+                <span class="number">✔️</span>
+                <span class="label"><i class="fas fa-ad"></i> Digital Ads Expert</span>
+            </div>
         </div>
 
-        <div class="promise-card">
-          <span class="icon"><i class="fas fa-user-tie"></i></span>
-          <h3>Direct Access</h3>
-          <p>
-            No account managers. You talk directly to the developer who built
-            Jobpitality, Buffet On Travels & 4T Luxury Hotel. Real-time updates,
-            zero gatekeeping.
-          </p>
-          <span class="tag">Talk to the Dev</span>
-        </div>
-      </div>
+        <!-- ===== BLOG SECTION ===== -->
+        <section class="blog-section" id="blog">
+            <div class="section-header">
+                <h2>Insights for <span>Nigerian SMEs</span></h2>
+                <p>Practical tips on web design, digital marketing, and growing your business online.</p>
+            </div>
 
-      <!-- ===== HONEST METRICS ===== -->
-      <div class="honest-metrics">
-        <div class="metric-item">
-          <span class="number">5+</span>
-          <span class="label"
-            ><i class="fas fa-briefcase"></i> Active Projects</span
-          >
-        </div>
-        <div class="metric-item">
-          <span class="number">100%</span>
-          <span class="label"><i class="fas fa-code"></i> Custom Coded</span>
-        </div>
-        <div class="metric-item">
-          <span class="number">2hrs</span>
-          <span class="label"
-            ><i class="fas fa-clock"></i> Avg. Response Time</span
-          >
-        </div>
-        <div class="metric-item">
-          <span class="number">✔️</span>
-          <span class="label"
-            ><i class="fas fa-ad"></i> Digital Ads Expert</span
-          >
-        </div>
-      </div>
+            <div class="blog-grid">
 
-      <!-- ===== OFFER BANNER ===== -->
-      <div class="offer-banner">
-        <h2>Want More <span>Customers</span>?</h2>
-        <p>
-          I will audit your current Google/Facebook ads for free. If I can't
-          find wasted spend or missed opportunities, I'll send you
-          <strong>₦10,000</strong> for wasting your time. No strings attached.
-        </p>
-        <a
-          href="https://wa.me/2348039661354"
-          class="cta-btn"
-          style="background: #fff; color: #0a0a0a"
-        >
-          <i class="fas fa-search" style="margin-right: 10px"></i> Claim Your
-          Free Ad Audit
-        </a>
-        <p class="small-note">
-          * Only 3 audits available this week. First come, first served.
-        </p>
-      </div>
+                <div class="blog-card">
+                    <div class="image-placeholder">
+                        <i class="fas fa-hotel"></i>
+                    </div>
+                    <div class="body">
+                        <span class="tag">Hospitality</span>
+                        <h3><a href="/blog/hotel-booking-system-nigeria.html">How Nigerian Hotels Can Get More Direct Bookings</a></h3>
+                        <p>Stop relying on third-party platforms. Learn how a custom booking system can save you commission fees.</p>
+                        <div class="meta">
+                            <span class="author"><i class="fas fa-user"></i> OneStackDA</span>
+                            <a href="/blog/hotel-booking-system-nigeria.html" class="read-more">Read More →</a>
+                        </div>
+                    </div>
+                </div>
 
-      <!-- ===== FOOTER ===== -->
-      <footer>
-        <p>
-          © 2026 OneStackDA. Built for
-          <span style="color: #f5a623">Nigerian Brands</span>.
-        </p>
-        <p style="font-size: 0.8rem; margin-top: 5px">
-          Lagos, Nigeria |
-          <a href="mailto:info@onestackda.com">info@onestackda.com</a> |
-          <a
-            href="/privacy-policy.html"
-            style="color: #666; text-decoration: none"
-            >Privacy</a
-          >
-          |
-          <a
-            href="/terms-conditions.html"
-            style="color: #666; text-decoration: none"
-            >Terms</a
-          >
-        </p>
-      </footer>
+                <div class="blog-card">
+                    <div class="image-placeholder">
+                        <i class="fas fa-chart-simple"></i>
+                    </div>
+                    <div class="body">
+                        <span class="tag">Digital Marketing</span>
+                        <h3><a href="/blog/google-ads-nigeria-smes.html">Google Ads for Nigerian SMEs: A Beginner's Guide</a></h3>
+                        <p>Stop wasting money on ads that don't convert. Learn how to set up Google Ads that actually bring in customers.</p>
+                        <div class="meta">
+                            <span class="author"><i class="fas fa-user"></i> OneStackDA</span>
+                            <a href="/blog/google-ads-nigeria-smes.html" class="read-more">Read More →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <div class="image-placeholder">
+                        <i class="fas fa-mobile-screen"></i>
+                    </div>
+                    <div class="body">
+                        <span class="tag">Web Design</span>
+                        <h3><a href="/blog/website-design-nigeria-tips.html">5 Signs Your SME Website Needs a Redesign</a></h3>
+                        <p>Is your website driving customers away? Here are 5 warning signs that it's time for a redesign.</p>
+                        <div class="meta">
+                            <span class="author"><i class="fas fa-user"></i> OneStackDA</span>
+                            <a href="/blog/website-design-nigeria-tips.html" class="read-more">Read More →</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div style="text-align:center; margin-top:30px;">
+                <a href="/blog.html" class="cta-btn" style="background:transparent; border:2px solid #f5a623; color:#f5a623; padding:12px 30px; font-size:0.9rem;">
+                    <i class="fas fa-arrow-right"></i> View All Articles
+                </a>
+            </div>
+        </section>
+
+        <!-- ===== OFFER BANNER ===== -->
+        <div class="offer-banner">
+            <h2>Want More <span>Customers</span>?</h2>
+            <p>
+                I will audit your current Google/Facebook ads for free. If I can't
+                find wasted spend or missed opportunities, I'll send you
+                <strong>₦10,000</strong> for wasting your time. No strings attached.
+            </p>
+            <a href="https://wa.me/2348039661354" class="cta-btn">
+                <i class="fas fa-search"></i> Claim Your Free Ad Audit
+            </a>
+            <p class="small-note">
+                * Only 3 audits available this week. First come, first served.
+            </p>
+        </div>
+
+        <!-- ===== FOOTER ===== -->
+        <footer>
+            <p>
+                © 2026 OneStackDA. Built for <span style="color: #f5a623;">Nigerian Brands</span>.
+            </p>
+            <p class="footer-links">
+                Osogbo, Nigeria |
+                <a href="mailto:info@onestackda.com">info@onestackda.com</a> |
+                <a href="/privacy-policy.html">Privacy</a> |
+                <a href="/terms-conditions.html">Terms</a>
+            </p>
+        </footer>
+
     </div>
 
-    <!-- ===== JAVASCRIPT: HAMBURGER MENU TOGGLE ===== -->
+    <!-- ===== JAVASCRIPT ===== -->
     <script>
-      const hamburger = document.getElementById("hamburger");
-      const navMenu = document.getElementById("nav-menu");
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
 
-      hamburger.addEventListener("click", function () {
-        const isOpen = navMenu.classList.toggle("open");
-        hamburger.setAttribute("aria-expanded", isOpen);
-        const icon = hamburger.querySelector("i");
-        if (isOpen) {
-          icon.className = "fas fa-times";
-        } else {
-          icon.className = "fas fa-bars";
-        }
-      });
+        hamburger.addEventListener('click', function() {
+            const isOpen = navMenu.classList.toggle('open');
+            hamburger.setAttribute('aria-expanded', isOpen);
+            const icon = hamburger.querySelector('i');
+            if (isOpen) {
+                icon.className = 'fas fa-times';
+            } else {
+                icon.className = 'fas fa-bars';
+            }
+        });
+
+        document.querySelectorAll('header nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('open');
+                hamburger.setAttribute('aria-expanded', 'false');
+                hamburger.querySelector('i').className = 'fas fa-bars';
+            });
+        });
     </script>
-  </body>
+
+</body>
 </html>

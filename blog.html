@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+
+    <!-- ===== FAVICON ===== -->
+    <link rel="icon" type="image/svg+xml" href="image/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="image/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="image/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="image/favicon-16x16.png" />
+
+    <!-- ===== SEO ===== -->
+    <title>Blog – OneStackDA | Digital Marketing & Web Design Tips for Nigerian SMEs</title>
+    <meta name="description" content="Practical tips on web design, Google Ads, AI automation, and digital marketing for Nigerian SMEs. Learn how to grow your business online." />
+    <meta name="keywords" content="OneStackDA blog, web design tips Nigeria, Google Ads guide, SME digital marketing, Osogbo web design" />
+    <meta name="author" content="OneStackDA" />
+
+    <!-- ===== OPEN GRAPH ===== -->
+    <meta property="og:title" content="Blog – OneStackDA | Digital Marketing & Web Design Tips for Nigerian SMEs" />
+    <meta property="og:description" content="Practical tips on web design, Google Ads, AI automation, and digital marketing for Nigerian SMEs." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://onestackda.com/blog.html" />
+
+    <!-- ===== FONT AWESOME ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        /* ────────────── HEADER ────────────── */
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 30px;
+            border-bottom: 1px solid #222;
+            flex-wrap: wrap;
+            position: relative;
+        }
+
+        header .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #fff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            height: 50px;
+        }
+
+        header .logo svg {
+            height: 45px;
+            vertical-align: middle;
+        }
+
+        header nav {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        header nav a {
+            color: #aaa;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            font-size: 15px;
+        }
+
+        header nav a:hover {
+            color: #fff;
+        }
+
+        header nav a.cta-nav {
+            color: #f5a623;
+            font-weight: 700;
+        }
+
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 1.8rem;
+            cursor: pointer;
+            padding: 5px 10px;
+            z-index: 100;
+        }
+
+        .hamburger:hover {
+            color: #f5a623;
+        }
+
+        /* ────────────── BADGE ────────────── */
+        .badge {
+            display: inline-block;
+            background: #2a2a2a;
+            color: #f5a623;
+            padding: 6px 18px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border: 1px solid #333;
+            margin-bottom: 20px;
+        }
+
+        .badge i {
+            margin-right: 8px;
+        }
+
+        /* ────────────── BLOG HERO ────────────── */
+        .blog-hero {
+            text-align: center;
+            padding: 60px 20px 40px;
+            border-bottom: 1px solid #222;
+        }
+
+        .blog-hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #ffffff 0%, #a0a0a0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .blog-hero h1 span {
+            color: #f5a623;
+            -webkit-text-fill-color: #f5a623;
+        }
+
+        .blog-hero p {
+            color: #aaa;
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 20px;
+            line-height: 1.6;
+        }
+
+        /* ────────────── BLOG GRID ────────────── */
+        .blog-section {
+            padding: 40px 0 60px;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 30px;
+        }
+
+        .blog-card {
+            background: #141414;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #222;
+            transition: all 0.3s ease;
+        }
+
+        .blog-card:hover {
+            border-color: #f5a623;
+            transform: translateY(-5px);
+            background: #1a1a1a;
+        }
+
+        .blog-card .image-placeholder {
+            height: 200px;
+            background: #1a1a1a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid #222;
+            color: #555;
+            font-size: 3.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .blog-card .image-placeholder .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 20px;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+        }
+
+        .blog-card .image-placeholder .overlay .category-tag {
+            display: inline-block;
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #f5a623;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 4px 12px;
+            border-radius: 30px;
+            border: 1px solid rgba(245, 166, 35, 0.2);
+        }
+
+        .blog-card .image-placeholder i {
+            opacity: 0.3;
+        }
+
+        .blog-card .body {
+            padding: 25px;
+        }
+
+        .blog-card .body .meta {
+            display: flex;
+            gap: 16px;
+            color: #666;
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+        }
+
+        .blog-card .body .meta span i {
+            color: #f5a623;
+            margin-right: 4px;
+        }
+
+        .blog-card .body h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+
+        .blog-card .body h3 a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .blog-card .body h3 a:hover {
+            color: #f5a623;
+        }
+
+        .blog-card .body .excerpt {
+            color: #b0b0b0;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+
+        .blog-card .body .read-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #f5a623;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .blog-card .body .read-more:hover {
+            color: #ffb84d;
+            gap: 12px;
+        }
+
+        /* ────────────── PAGINATION ────────────── */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .pagination a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 40px;
+            height: 40px;
+            padding: 0 14px;
+            border-radius: 8px;
+            border: 1px solid #222;
+            color: #aaa;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .pagination a:hover,
+        .pagination a.active {
+            background: #f5a623;
+            color: #0a0a0a;
+            border-color: #f5a623;
+        }
+
+        .pagination a.disabled {
+            opacity: 0.3;
+            pointer-events: none;
+        }
+
+        /* ────────────── FOOTER ────────────── */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid #222;
+            margin-top: 40px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #f5a623;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        footer .footer-links {
+            font-size: 0.8rem;
+            margin-top: 5px;
+        }
+
+        footer .footer-links a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        footer .footer-links a:hover {
+            color: #f5a623;
+            text-decoration: underline;
+        }
+
+        /* ────────────── RESPONSIVE ────────────── */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-wrap: nowrap;
+                padding: 15px 20px;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            header nav {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background: #0a0a0a;
+                padding: 20px 0;
+                border-top: 1px solid #222;
+                gap: 15px;
+                align-items: center;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                right: 0;
+                z-index: 99;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+            }
+
+            header nav.open {
+                display: flex;
+            }
+
+            header nav a {
+                font-size: 1.1rem;
+                padding: 8px 0;
+            }
+
+            .header-container {
+                flex-wrap: wrap;
+                position: relative;
+            }
+
+            .blog-hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .blog-hero p {
+                font-size: 1rem;
+            }
+
+            .blog-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+            }
+
+            .blog-card .image-placeholder {
+                height: 160px;
+            }
+
+            header .logo svg {
+                height: 35px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-container {
+                padding: 10px 15px;
+            }
+
+            header .logo svg {
+                height: 30px;
+            }
+
+            .blog-hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .blog-hero p {
+                font-size: 0.95rem;
+            }
+
+            .blog-hero {
+                padding: 40px 15px 30px;
+            }
+
+            .blog-section {
+                padding: 20px 0 40px;
+            }
+
+            .blog-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .blog-card .body {
+                padding: 18px 16px;
+            }
+
+            .blog-card .body h3 {
+                font-size: 1.1rem;
+            }
+
+            .blog-card .body .excerpt {
+                font-size: 0.9rem;
+            }
+
+            .blog-card .image-placeholder {
+                height: 140px;
+                font-size: 2.5rem;
+            }
+
+            .pagination a {
+                min-width: 36px;
+                height: 36px;
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <!-- ===== HEADER ===== -->
+        <header>
+            <div class="header-container">
+                <a href="/" class="logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" height="45" style="vertical-align: middle">
+                        <rect x="10" y="15" width="55" height="22" rx="6" fill="#f5a623" />
+                        <rect x="25" y="49" width="55" height="22" rx="6" fill="#f5a623" opacity="0.85" />
+                        <rect x="10" y="83" width="55" height="22" rx="6" fill="#f5a623" opacity="0.7" />
+                        <text x="90" y="62" font-family="'Segoe UI', Arial, sans-serif" font-weight="800" font-size="42" fill="#ffffff" letter-spacing="1">ONE</text>
+                        <text x="182" y="62" font-family="'Segoe UI', Arial, sans-serif" font-weight="800" font-size="42" fill="#f5a623" letter-spacing="1">STACK</text>
+                        <text x="325" y="62" font-family="'Segoe UI', Arial, sans-serif" font-weight="700" font-size="24" fill="#888888" letter-spacing="1">DA</text>
+                    </svg>
+                </a>
+
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <nav id="nav-menu" role="navigation" aria-label="Main navigation">
+                    <a href="/">Home</a>
+                    <a href="/services.html">Services</a>
+                    <a href="/blog.html" class="cta-nav">Blog</a>
+                    <a href="/contact.html">Contact</a>
+                    <a href="/promo.html">Promo</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- ===== BLOG HERO ===== -->
+        <section class="blog-hero">
+            <div class="badge">
+                <i class="fas fa-pen-fancy"></i> INSIGHTS
+            </div>
+            <h1>Read. Learn. <span>Grow.</span></h1>
+            <p>
+                Practical tips on web design, Google Ads, AI automation, and digital marketing
+                for Nigerian SMEs. No fluff — just actionable advice.
+            </p>
+        </section>
+
+        <!-- ===== BLOG GRID ===== -->
+        <section class="blog-section">
+            <div class="blog-grid">
+
+                <!-- Blog Post 1 -->
+                <article class="blog-card">
+                    <div class="image-placeholder">
+                        <i class="fas fa-hotel"></i>
+                        <div class="overlay">
+                            <span class="category-tag">Hospitality</span>
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="meta">
+                            <span><i class="fas fa-calendar-alt"></i> June 15, 2026</span>
+                            <span><i class="fas fa-clock"></i> 6 min read</span>
+                        </div>
+                        <h3><a href="/blog/hotel-booking-system-nigeria.html">How Nigerian Hotels Can Get More Direct Bookings</a></h3>
+                        <p class="excerpt">
+                            Stop relying on third-party platforms. Learn how a custom booking system can save you commission fees and build customer loyalty.
+                        </p>
+                        <a href="/blog/hotel-booking-system-nigeria.html" class="read-more">
+                            Read Article <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 2 -->
+                <article class="blog-card">
+                    <div class="image-placeholder">
+                        <i class="fas fa-chart-simple"></i>
+                        <div class="overlay">
+                            <span class="category-tag">Digital Marketing</span>
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="meta">
+                            <span><i class="fas fa-calendar-alt"></i> June 10, 2026</span>
+                            <span><i class="fas fa-clock"></i> 8 min read</span>
+                        </div>
+                        <h3><a href="/blog/google-ads-nigeria-smes.html">Google Ads for Nigerian SMEs: A Beginner's Guide</a></h3>
+                        <p class="excerpt">
+                            Stop wasting money on ads that don't convert. Learn how to set up Google Ads that actually bring in customers for your business.
+                        </p>
+                        <a href="/blog/google-ads-nigeria-smes.html" class="read-more">
+                            Read Article <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 3 -->
+                <article class="blog-card">
+                    <div class="image-placeholder">
+                        <i class="fas fa-mobile-screen"></i>
+                        <div class="overlay">
+                            <span class="category-tag">Web Design</span>
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="meta">
+                            <span><i class="fas fa-calendar-alt"></i> June 5, 2026</span>
+                            <span><i class="fas fa-clock"></i> 5 min read</span>
+                        </div>
+                        <h3><a href="/blog/website-design-nigeria-tips.html">5 Signs Your SME Website Needs a Redesign</a></h3>
+                        <p class="excerpt">
+                            Is your website driving customers away? Here are 5 warning signs that it's time for a redesign — and how to fix them.
+                        </p>
+                        <a href="/blog/website-design-nigeria-tips.html" class="read-more">
+                            Read Article <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 4 -->
+                <article class="blog-card">
+                    <div class="image-placeholder">
+                        <i class="fas fa-robot"></i>
+                        <div class="overlay">
+                            <span class="category-tag">Automation</span>
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="meta">
+                            <span><i class="fas fa-calendar-alt"></i> May 28, 2026</span>
+                            <span><i class="fas fa-clock"></i> 7 min read</span>
+                        </div>
+                        <h3><a href="/blog/ai-automation-nigeria-smes.html">AI Automation for Nigerian SMEs: Save 20+ Hours a Week</a></h3>
+                        <p class="excerpt">
+                            Discover how AI-powered WhatsApp chatbots, email sequences, and CRM automations can free up your time and increase sales.
+                        </p>
+                        <a href="/blog/ai-automation-nigeria-smes.html" class="read-more">
+                            Read Article <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 5 -->
+                <article class="blog-card">
+                    <div class="image-placeholder">
+                        <i class="fas fa-store"></i>
+                        <div class="overlay">
+                            <span class="category-tag">E-Commerce</span>
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="meta">
+                            <span><i class="fas fa-calendar-alt"></i> May 20, 2026</span>
+                            <span><i class="fas fa-clock"></i> 6 min read</span>
+                        </div>
+                        <h3><a href="/blog/ecommerce-nigeria-smes.html">How to Start an E-Commerce Store in Nigeria</a></h3>
+                        <p class="excerpt">
+                            A step-by-step guide to building an online store that actually sells — from choosing the right platform to marketing your products.
+                        </p>
+                        <a href="/blog/ecommerce-nigeria-smes.html" class="read-more">
+                            Read Article <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 6 -->
+                <article class="blog-card">
+                    <div class="image-placeholder">
+                        <i class="fas fa-shield-halved"></i>
+                        <div class="overlay">
+                            <span class="category-tag">Security</span>
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="meta">
+                            <span><i class="fas fa-calendar-alt"></i> May 12, 2026</span>
+                            <span><i class="fas fa-clock"></i> 4 min read</span>
+                        </div>
+                        <h3><a href="/blog/website-security-nigeria.html">Why Nigerian SMEs Need Website Security</a></h3>
+                        <p class="excerpt">
+                            Protect your business from cyber threats. Learn the basics of website security and why it's essential for Nigerian SMEs.
+                        </p>
+                        <a href="/blog/website-security-nigeria.html" class="read-more">
+                            Read Article <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- ===== PAGINATION ===== -->
+            <div class="pagination">
+                <a href="#" class="disabled"><i class="fas fa-chevron-left"></i></a>
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#"><i class="fas fa-chevron-right"></i></a>
+            </div>
+        </section>
+
+        <!-- ===== FOOTER ===== -->
+        <footer>
+            <p>
+                © 2026 OneStackDA. Built for <span style="color: #f5a623;">Nigerian Brands</span>.
+            </p>
+            <p class="footer-links">
+                Osogbo, Nigeria |
+                <a href="mailto:info@onestackda.com">info@onestackda.com</a> |
+                <a href="/privacy-policy.html">Privacy</a> |
+                <a href="/terms-conditions.html">Terms</a>
+            </p>
+        </footer>
+
+    </div>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburger.addEventListener('click', function() {
+            const isOpen = navMenu.classList.toggle('open');
+            hamburger.setAttribute('aria-expanded', isOpen);
+            const icon = hamburger.querySelector('i');
+            if (isOpen) {
+                icon.className = 'fas fa-times';
+            } else {
+                icon.className = 'fas fa-bars';
+            }
+        });
+
+        // Close menu when a link is clicked (mobile)
+        document.querySelectorAll('header nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('open');
+                hamburger.setAttribute('aria-expanded', 'false');
+                hamburger.querySelector('i').className = 'fas fa-bars';
+            });
+        });
+    </script>
+
+</body>
+</html>
