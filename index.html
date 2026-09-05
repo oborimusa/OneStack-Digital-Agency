@@ -296,6 +296,15 @@
         }
 
         /* ────────────── PORTFOLIO SECTION ────────────── */
+        /* Add this to your <style> section */
+.portfolio-card .image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This crops to fill the box */
+    object-position: top; /* Shows the top of the site */
+    display: block;
+}
+        
         .portfolio-section {
             padding: 60px 20px;
             border-bottom: 1px solid #222;
@@ -919,20 +928,43 @@
             </div>
         </header>
 
-        <!-- ===== HERO ===== -->
-        <section class="hero">
+                <!-- ===== HERO ===== -->
+            <section class="hero">
             <div class="badge">
-                <i class="fas fa-bolt"></i> TRUSTED BY NIGERIAN BRANDS
+                <i class="fas fa-bolt"></i> RECENT: Daruth Properties • Bouncer Protocol • HospitalityRecruit
             </div>
-            <h1>Digital Agency for <span class="highlight">Nigerian SMEs</span></h1>
+            <h1>Websites That <span class="highlight">Book Clients</span> – Built for Nigerian Hotels, Security &amp; Recruiters</h1>
             <p>
-                Web design, Google Ads &amp; booking systems that deliver real results.<br />
-                <strong>Based in Osogbo – serving Nigeria and beyond.</strong>
+                Custom websites, booking systems, and Google Ads that deliver ROI.<br />
+                <strong>Starting at ₦350,000 – 2-week delivery. Based in Osogbo.</strong>
+            </p>
+            <div style="display:flex; gap:15px; justify-content:center; flex-wrap:wrap;">
+                <a href="pricing.html" class="cta-btn">
+                    <i class="fas fa-tag"></i> See Packages
+                </a>
+                <a href="https://calendly.com/onestackda/15min" class="cta-btn" style="background:transparent; border:2px solid #f5a623; color:#f5a623;">
+                    <i class="fas fa-calendar"></i> Book 15-min Call
+                </a>
+            </div>
+            <p style="font-size:0.8rem; color:#666; margin-top:15px;">
+                * Free audit included with every project. No obligation.
+            </p>
+        </section>
+
+    <div class="offer-banner">
+            <h2>Want More <span>Customers</span>?</h2>
+            <p>
+                I will audit your current Google/Facebook ads for free. If I can't
+                find wasted spend or missed opportunities, I'll send you
+                <strong>₦10,000</strong> for wasting your time. No strings attached.
             </p>
             <a href="https://wa.me/2348039661354" class="cta-btn">
-                <i class="fas fa-rocket"></i> Launch Your Project
+                <i class="fas fa-search"></i> Claim Your Free Ad Audit
             </a>
-        </section>
+            <p class="small-note">
+                * Only 3 audits available this week. First come, first served.
+            </p>
+        </div>
 
         <!-- ===== RECENT PROJECTS ===== -->
         <section class="trusted-section">
@@ -995,9 +1027,9 @@
 
                 <!-- Garuth Properties -->
                 <div class="portfolio-card">
-                    <div class="image-placeholder">
-                        <i class="fas fa-building"></i>
-                    </div>
+                    <div class="image-placeholder" style="overflow:hidden; background:#0a0a0a; padding:10px;">
+                    <img src="images/daruth-screenshot.jpg" alt="Daruth Properties website screenshot" style="width:100%; height:100%; object-fit:cover; border-radius:8px;" />
+                </div>
                     <div class="body">
                         <span class="tag">Real Estate</span>
                         <h3>Daruth Properties</h3>
@@ -1011,7 +1043,7 @@
                 <!-- Bouncer Protocol -->
                 <div class="portfolio-card">
                     <div class="image-placeholder">
-                        <i class="fas fa-shield-halved"></i>
+                        <img src="images/bouncer2.png" alt="Daruth Properties website screenshot" style="width:100%; height:100%; object-fit:cover; border-radius:8px;" />
                     </div>
                     <div class="body">
                         <span class="tag">Security</span>
@@ -1026,7 +1058,7 @@
                 <!-- hospitalityrecruit -->
                 <div class="portfolio-card">
                     <div class="image-placeholder">
-                        <i class="fas fa-briefcase"></i>
+                        <img src="images/hospitality2.png" alt="Daruth Properties website screenshot" style="width:100%; height:100%; object-fit:cover; border-radius:8px;" />
                     </div>
                     <div class="body">
                         <span class="tag">Recruitment</span>
@@ -1095,7 +1127,24 @@
             </div>
         </div>
 
-        <!-- ===== BLOG SECTION ===== -->
+        <section class="testimonial-section" style="padding:60px 20px; border-bottom:1px solid #222;">
+    <div style="max-width:800px; margin:0 auto; text-align:center;">
+        <i class="fas fa-quote-right" style="font-size:3rem; color:#f5a623; opacity:0.3;"></i>
+        <blockquote style="font-size:1.4rem; color:#fff; line-height:1.6; margin:20px 0;">
+            "OneStackDA built our property website in 2 weeks. We've had 12 direct bookings since launch – no third-party fees."
+        </blockquote>
+        <p style="color:#888;">
+            — <strong style="color:#fff;">Daruth Properties</strong>, Ilorin
+        </p>
+        <div style="display:flex; justify-content:center; gap:30px; margin-top:30px; flex-wrap:wrap;">
+            <span style="color:#666; font-size:0.9rem;"><i class="fas fa-star" style="color:#f5a623;"></i> 5.0 / 5.0</span>
+            <span style="color:#666; font-size:0.9rem;"><i class="fas fa-users" style="color:#f5a623;"></i> 5+ clients in 2025</span>
+            <span style="color:#666; font-size:0.9rem;"><i class="fas fa-clock" style="color:#f5a623;"></i> Avg. delivery: 12 days</span>
+        </div>
+    </div>
+</section>
+
+        <!-- ===== BLOG SECTION =====
         <section class="blog-section" id="blog">
             <div class="section-header">
                 <h2>Insights for <span>Nigerian SMEs</span></h2>
@@ -1156,10 +1205,10 @@
                     <i class="fas fa-arrow-right"></i> View All Articles
                 </a>
             </div>
-        </section>
+        </section> -->
 
         <!-- ===== OFFER BANNER ===== -->
-        <div class="offer-banner">
+        <!-- <div class="offer-banner">
             <h2>Want More <span>Customers</span>?</h2>
             <p>
                 I will audit your current Google/Facebook ads for free. If I can't
@@ -1172,7 +1221,7 @@
             <p class="small-note">
                 * Only 3 audits available this week. First come, first served.
             </p>
-        </div>
+        </div> -->
 
         <!-- ===== FOOTER ===== -->
         <footer>
