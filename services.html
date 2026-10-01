@@ -5,20 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
 
     <!-- ===== FAVICON ===== -->
-    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
+    <link rel="icon" type="image/svg+xml" href="image/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="image/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="image/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="image/favicon-16x16.png" />
 
     <!-- ===== SEO ===== -->
-    <title>Our Services – OneStackDA | Web Design Osogbo, Google Ads Nigeria</title>
-    <meta name="description" content="We build custom websites, hotel management apps, Google Ads, and AI automation for Nigerian SMEs. No middlemen. Direct dev access. Based in Osogbo." />
-    <meta name="keywords" content="OneStackDA, web design Nigeria, hotel management app, Google Ads Lagos, AI automation, SME digital solutions, Osogbo web design" />
+    <title>Our Services – OneStackDA | Websites, Booking Systems & Ads for Nigerian SMEs</title>
+    <meta name="description" content="Industry-specific digital systems for Nigerian SMEs. Real estate websites, hotel booking engines, restaurant menus, recruitment portals, and Google Ads. Based in Osogbo." />
+    <meta name="keywords" content="OneStackDA services, real estate website Nigeria, hotel booking system, restaurant website, recruitment portal, Google Ads Nigeria" />
     <meta name="author" content="OneStackDA" />
 
     <!-- ===== OPEN GRAPH ===== -->
-    <meta property="og:title" content="Our Services – OneStackDA Digital Agency for Nigerian SMEs" />
-    <meta property="og:description" content="Custom websites, hotel management systems, Google Ads, and AI automation for Nigerian SMEs. Based in Osogbo." />
+    <meta property="og:title" content="Our Services – OneStackDA | Industry-Specific Digital Systems" />
+    <meta property="og:description" content="Websites, booking systems, and ads that deliver results for Nigerian SMEs. Built for real estate, hotels, restaurants, and recruiters." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://onestackda.com/services.html" />
 
@@ -111,8 +111,14 @@
             color: #f5a623;
         }
 
-        /* ────────────── BADGE ────────────── */
-        .badge {
+        /* ────────────── HERO ────────────── */
+        .services-hero {
+            text-align: center;
+            padding: 60px 20px 30px;
+            border-bottom: 1px solid #222;
+        }
+
+        .services-hero .badge {
             display: inline-block;
             background: #2a2a2a;
             color: #f5a623;
@@ -126,17 +132,6 @@
             margin-bottom: 20px;
         }
 
-        .badge i {
-            margin-right: 8px;
-        }
-
-        /* ────────────── SERVICES HERO ────────────── */
-        .services-hero {
-            text-align: center;
-            padding: 60px 20px 40px;
-            border-bottom: 1px solid #222;
-        }
-
         .services-hero h1 {
             font-size: 3rem;
             font-weight: 800;
@@ -145,7 +140,7 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
             line-height: 1.2;
-            margin-bottom: 20px;
+            margin-bottom: 16px;
         }
 
         .services-hero h1 span {
@@ -155,8 +150,8 @@
 
         .services-hero p {
             color: #aaa;
-            font-size: 1.2rem;
-            max-width: 600px;
+            font-size: 1.15rem;
+            max-width: 650px;
             margin: 0 auto 20px;
             line-height: 1.6;
         }
@@ -165,10 +160,273 @@
             color: #f5a623;
         }
 
+        /* ────────────── SECTION HEADER ────────────── */
+        .section-header {
+            text-align: center;
+            margin: 50px 0 30px;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+
+        .section-header h2 span {
+            color: #f5a623;
+        }
+
+        .section-header p {
+            color: #888;
+            font-size: 1rem;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* ────────────── INDUSTRY SYSTEMS ────────────── */
+        .industry-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 28px;
+            padding: 20px 0 40px;
+        }
+
+        .industry-card {
+            background: #141414;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #222;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .industry-card:hover {
+            border-color: #f5a623;
+            transform: translateY(-6px);
+            background: #1a1a1a;
+        }
+
+        .industry-card .card-image {
+            height: 180px;
+            background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid #222;
+            font-size: 4rem;
+            color: #f5a623;
+            opacity: 0.85;
+        }
+
+        .industry-card .card-body {
+            padding: 26px 24px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .industry-card .card-body h3 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .industry-card .card-body p {
+            color: #b0b0b0;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 16px;
+            flex-grow: 1;
+        }
+
+        .industry-card .card-body ul {
+            list-style: none;
+            margin-bottom: 20px;
+            padding: 0;
+        }
+
+        .industry-card .card-body ul li {
+            color: #aaa;
+            font-size: 0.9rem;
+            padding: 5px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .industry-card .card-body ul li i {
+            color: #f5a623;
+            font-size: 0.85rem;
+            width: 16px;
+            text-align: center;
+        }
+
+        .industry-card .card-body .explore-link {
+            color: #f5a623;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            margin-top: auto;
+        }
+
+        .industry-card .card-body .explore-link:hover {
+            color: #ffb84d;
+            gap: 12px;
+        }
+
+        /* ────────────── PROCESS SECTION ────────────── */
+        .process-section {
+            padding: 50px 0;
+            border-top: 1px solid #222;
+            border-bottom: 1px solid #222;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 24px;
+            margin-top: 30px;
+        }
+
+        .process-step {
+            background: #141414;
+            border-radius: 16px;
+            padding: 28px 20px;
+            border: 1px solid #222;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .process-step:hover {
+            border-color: #f5a623;
+            transform: translateY(-4px);
+            background: #1a1a1a;
+        }
+
+        .process-step .step-number {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #f5a623;
+            background: rgba(245, 166, 35, 0.1);
+            padding: 4px 12px;
+            border-radius: 30px;
+            border: 1px solid rgba(245, 166, 35, 0.2);
+            margin-bottom: 14px;
+        }
+
+        .process-step h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+
+        .process-step p {
+            color: #b0b0b0;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* ────────────── CORE SERVICES ────────────── */
+        .core-services {
+            padding: 50px 0;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 30px;
+        }
+
+        .service-card {
+            background: #141414;
+            padding: 30px 24px;
+            border-radius: 16px;
+            border: 1px solid #222;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            border-color: #f5a623;
+            transform: translateY(-4px);
+            background: #1a1a1a;
+        }
+
+        .service-card .icon {
+            font-size: 2rem;
+            color: #f5a623;
+            display: block;
+            margin-bottom: 14px;
+        }
+
+        .service-card h3 {
+            color: #fff;
+            font-size: 1.15rem;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .service-card p {
+            color: #b0b0b0;
+            line-height: 1.7;
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+        }
+
+        .service-card .price {
+            display: inline-block;
+            margin-top: 6px;
+            color: #f5a623;
+            font-weight: 700;
+            font-size: 0.9rem;
+            border-top: 1px solid #222;
+            padding-top: 12px;
+            width: 100%;
+        }
+
+        /* ────────────── CTA BANNER ────────────── */
+        .cta-banner {
+            text-align: center;
+            background: linear-gradient(135deg, #1a1205 0%, #0a0a0a 100%);
+            padding: 50px 30px;
+            border-radius: 20px;
+            margin: 50px 0 30px;
+            border: 2px solid #f5a623;
+        }
+
+        .cta-banner h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 12px;
+        }
+
+        .cta-banner h2 span {
+            color: #f5a623;
+        }
+
+        .cta-banner p {
+            color: #b0b0b0;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            max-width: 550px;
+            margin: 0 auto 24px;
+        }
+
         .cta-btn {
             background: #f5a623;
             color: #0a0a0a;
-            padding: 16px 40px;
+            padding: 16px 36px;
             border: none;
             border-radius: 50px;
             font-size: 1rem;
@@ -186,117 +444,7 @@
         }
 
         .cta-btn i {
-            margin-right: 10px;
-        }
-
-        /* ────────────── SERVICE GRID ────────────── */
-        .service-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            padding: 40px 0;
-        }
-
-        .service-card {
-            background: #141414;
-            padding: 30px 25px;
-            border-radius: 16px;
-            border: 1px solid #222;
-            transition: all 0.3s ease;
-            text-align: left;
-        }
-
-        .service-card:hover {
-            border-color: #f5a623;
-            transform: translateY(-5px);
-            background: #1a1a1a;
-        }
-
-        .service-card .icon {
-            font-size: 2.5rem;
-            color: #f5a623;
-            display: block;
-            margin-bottom: 15px;
-        }
-
-        .service-card h3 {
-            color: #fff;
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-        }
-
-        .service-card p {
-            color: #b0b0b0;
-            line-height: 1.7;
-            font-size: 0.95rem;
-            margin-bottom: 12px;
-        }
-
-        .service-card .price {
-            display: inline-block;
-            margin-top: 5px;
-            color: #f5a623;
-            font-weight: 700;
-            font-size: 0.95rem;
-            border-top: 1px solid #222;
-            padding-top: 12px;
-            width: 100%;
-        }
-
-        .service-card .price i {
-            margin-right: 6px;
-        }
-
-        .service-card .tag {
-            display: inline-block;
-            font-size: 0.65rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            color: #f5a623;
-            background: rgba(245, 166, 35, 0.1);
-            padding: 2px 10px;
-            border-radius: 30px;
-            border: 1px solid rgba(245, 166, 35, 0.1);
-            margin-bottom: 10px;
-        }
-
-        /* ────────────── CTA BANNER ────────────── */
-        .cta-banner {
-            text-align: center;
-            background: #111;
-            padding: 40px 30px;
-            border-radius: 16px;
-            margin: 20px 0 40px;
-            border: 1px solid #222;
-        }
-
-        .cta-banner p {
-            color: #aaa;
-            font-size: 1.1rem;
-            line-height: 1.6;
-        }
-
-        .cta-banner p strong {
-            color: #fff;
-        }
-
-        .cta-banner a {
-            display: inline-block;
-            margin-top: 15px;
-            color: #f5a623;
-            font-weight: 700;
-            font-size: 1.1rem;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .cta-banner a:hover {
-            color: #ffb84d;
-            text-decoration: underline;
-        }
-
-        .cta-banner a i {
-            margin-left: 6px;
+            margin-right: 8px;
         }
 
         /* ────────────── FOOTER ────────────── */
@@ -383,17 +531,26 @@
                 font-size: 1rem;
             }
 
-            .service-grid {
-                grid-template-columns: 1fr 1fr;
+            .industry-grid {
+                grid-template-columns: 1fr;
                 gap: 20px;
             }
 
-            .cta-banner {
-                padding: 25px 20px;
+            .process-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 16px;
             }
 
-            .cta-banner p {
-                font-size: 1rem;
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-header h2 {
+                font-size: 1.7rem;
+            }
+
+            .cta-banner h2 {
+                font-size: 1.5rem;
             }
 
             header .logo svg {
@@ -410,50 +567,56 @@
                 height: 30px;
             }
 
+            .services-hero {
+                padding: 40px 15px 20px;
+            }
+
             .services-hero h1 {
-                font-size: 1.8rem;
+                font-size: 1.7rem;
             }
 
             .services-hero p {
                 font-size: 0.95rem;
             }
 
-            .services-hero {
-                padding: 40px 15px 30px;
+            .section-header h2 {
+                font-size: 1.4rem;
             }
 
-            .service-grid {
-                grid-template-columns: 1fr;
-                gap: 16px;
-                padding: 20px 0;
-            }
-
-            .service-card {
-                padding: 20px 16px;
-            }
-
-            .service-card h3 {
-                font-size: 1.1rem;
-            }
-
-            .service-card p {
+            .section-header p {
                 font-size: 0.9rem;
             }
 
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .industry-card .card-body {
+                padding: 20px 18px;
+            }
+
+            .industry-card .card-body h3 {
+                font-size: 1.15rem;
+            }
+
+            .service-card {
+                padding: 22px 18px;
+            }
+
             .cta-banner {
-                padding: 20px 15px;
+                padding: 30px 18px;
+            }
+
+            .cta-banner h2 {
+                font-size: 1.3rem;
             }
 
             .cta-banner p {
                 font-size: 0.95rem;
             }
 
-            .cta-banner a {
-                font-size: 1rem;
-            }
-
             .cta-btn {
-                padding: 14px 28px;
+                padding: 14px 26px;
                 font-size: 0.9rem;
             }
         }
@@ -483,98 +646,212 @@
                 <nav id="nav-menu" role="navigation" aria-label="Main navigation">
                     <a href="/">Home</a>
                     <a href="/services.html" class="cta-nav">Services</a>
-                    <!-- <a href="/blog.html">Blog</a> -->
+                    <a href="/blog.html">Blog</a>
                     <a href="/contact.html">Contact</a>
                     <a href="/promo.html">Promo</a>
                 </nav>
             </div>
         </header>
 
-        <!-- ===== SERVICES HERO ===== -->
+        <!-- ===== HERO ===== -->
         <section class="services-hero">
             <div class="badge">
-                <i class="fas fa-bolt"></i> WHAT WE DO
+                <i class="fas fa-bolt"></i> WHAT WE BUILD
             </div>
-            <h1>What We <span>Actually</span> Build</h1>
+            <h1>Digital Systems That <span>Convert</span></h1>
             <p>
-                We focus on what actually delivers results — websites, ads, and
-                automation. <strong>No fluff. Just code.</strong>
+                Industry-specific websites, booking engines, and automation built for Nigerian SMEs.
+                <strong>No generic templates. No fluff. Just systems that work.</strong>
             </p>
-            <a href="https://wa.me/2348039661354" class="cta-btn">
-                <i class="fas fa-rocket"></i> Book a Free Strategy Call
-            </a>
         </section>
 
-        <!-- ===== SERVICE GRID ===== -->
+        <!-- ===== INDUSTRY SYSTEMS ===== -->
+        <div class="section-header">
+            <h2>Industry-Specific <span>Systems</span></h2>
+            <p>Each system is structured around how your industry actually operates — not generic templates or trends.</p>
+        </div>
+
+        <div class="industry-grid">
+
+            <!-- Real Estate -->
+            <div class="industry-card">
+                <div class="card-image">
+                    <i class="fas fa-building"></i>
+                </div>
+                <div class="card-body">
+                    <h3>Real Estate Websites</h3>
+                    <p>Showcase properties and capture serious buyer enquiries instantly. Structured to reduce manual follow-ups.</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Property listings with filters</li>
+                        <li><i class="fas fa-check-circle"></i> Instant enquiry capture</li>
+                        <li><i class="fas fa-check-circle"></i> WhatsApp &amp; form integration</li>
+                        <li><i class="fas fa-check-circle"></i> Admin dashboard for updates</li>
+                    </ul>
+                    <a href="/contact.html" class="explore-link">Explore Real Estate Solutions <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Hotels & Hospitality -->
+            <div class="industry-card">
+                <div class="card-image">
+                    <i class="fas fa-hotel"></i>
+                </div>
+                <div class="card-body">
+                    <h3>Hotel &amp; Hospitality Websites</h3>
+                    <p>Booking-ready hospitality systems built to support direct enquiries, reservations, and guest communication.</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Room showcase &amp; availability</li>
+                        <li><i class="fas fa-check-circle"></i> Online booking engine</li>
+                        <li><i class="fas fa-check-circle"></i> Guest inquiry management</li>
+                        <li><i class="fas fa-check-circle"></i> WhatsApp concierge integration</li>
+                    </ul>
+                    <a href="/contact.html" class="explore-link">Explore Hotel Solutions <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Restaurants -->
+            <div class="industry-card">
+                <div class="card-image">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <div class="card-body">
+                    <h3>Restaurant &amp; Dining Websites</h3>
+                    <p>Streamlined dining websites that manage menus, reservations, and customer communication efficiently.</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Digital menu with photos</li>
+                        <li><i class="fas fa-check-circle"></i> Table reservation system</li>
+                        <li><i class="fas fa-check-circle"></i> Online ordering integration</li>
+                        <li><i class="fas fa-check-circle"></i> Customer feedback capture</li>
+                    </ul>
+                    <a href="/contact.html" class="explore-link">Explore Dining Solutions <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Recruitment -->
+            <div class="industry-card">
+                <div class="card-image">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <div class="card-body">
+                    <h3>Recruitment &amp; Job Portals</h3>
+                    <p>Job listing platforms with application tracking, candidate management, and admin dashboards.</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Job listings with categories</li>
+                        <li><i class="fas fa-check-circle"></i> CV upload &amp; applications</li>
+                        <li><i class="fas fa-check-circle"></i> Employer dashboards</li>
+                        <li><i class="fas fa-check-circle"></i> Email &amp; WhatsApp alerts</li>
+                    </ul>
+                    <a href="/contact.html" class="explore-link">Explore Recruitment Systems <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Fashion & Retail -->
+            <div class="industry-card">
+                <div class="card-image">
+                    <i class="fas fa-shopping-bag"></i>
+                </div>
+                <div class="card-body">
+                    <h3>Fashion &amp; Retail Stores</h3>
+                    <p>Online stores built for Nigerian buyers — mobile-first, with Paystack/Flutterwave checkout and WhatsApp ordering.</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Product catalog &amp; cart</li>
+                        <li><i class="fas fa-check-circle"></i> Paystack / Flutterwave integration</li>
+                        <li><i class="fas fa-check-circle"></i> WhatsApp order button</li>
+                        <li><i class="fas fa-check-circle"></i> Inventory management</li>
+                    </ul>
+                    <a href="/contact.html" class="explore-link">Explore E-Commerce <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Professional Services -->
+            <div class="industry-card">
+                <div class="card-image">
+                    <i class="fas fa-user-tie"></i>
+                </div>
+                <div class="card-body">
+                    <h3>Professional Services</h3>
+                    <p>Websites for lawyers, clinics, consultants, and agencies — built to establish authority and capture leads.</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Service showcase pages</li>
+                        <li><i class="fas fa-check-circle"></i> Appointment booking</li>
+                        <li><i class="fas fa-check-circle"></i> Client testimonials</li>
+                        <li><i class="fas fa-check-circle"></i> Google Business integration</li>
+                    </ul>
+                    <a href="/contact.html" class="explore-link">Explore Professional Solutions <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ===== PROCESS SECTION ===== -->
+        <section class="process-section">
+            <div class="section-header">
+                <h2>A Structured <span>Approach</span></h2>
+                <p>Every project follows a disciplined methodology — no guesswork, no surprises.</p>
+            </div>
+
+            <div class="process-grid">
+                <div class="process-step">
+                    <span class="step-number">01</span>
+                    <h3>Discovery</h3>
+                    <p>We analyse your business operations and identify friction points.</p>
+                </div>
+                <div class="process-step">
+                    <span class="step-number">02</span>
+                    <h3>Strategy</h3>
+                    <p>We map your systems and define the optimal digital architecture.</p>
+                </div>
+                <div class="process-step">
+                    <span class="step-number">03</span>
+                    <h3>Design</h3>
+                    <p>We create interfaces built for clarity, trust, and conversion.</p>
+                </div>
+                <div class="process-step">
+                    <span class="step-number">04</span>
+                    <h3>Development</h3>
+                    <p>We build robust systems with automation and integrations.</p>
+                </div>
+                <div class="process-step">
+                    <span class="step-number">05</span>
+                    <h3>Launch &amp; Optimise</h3>
+                    <p>We deploy, monitor, and continuously improve your system.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CORE SERVICES ===== -->
+        <div class="section-header">
+            <h2>Core <span>Services</span></h2>
+            <p>Beyond industry systems, we also offer these services to every client.</p>
+        </div>
+
         <div class="service-grid">
 
             <div class="service-card">
                 <span class="icon"><i class="fas fa-laptop-code"></i></span>
-                <span class="tag">Web Development</span>
-                <h3>Custom Websites &amp; E-Commerce</h3>
-                <p>
-                    Corporate websites, Shopify stores, WooCommerce, and custom coded
-                    platforms. We build sites that actually convert visitors into paying
-                    customers.
-                </p>
+                <h3>Custom Websites</h3>
+                <p>Corporate sites, landing pages, and custom-coded platforms built for speed and conversion.</p>
                 <span class="price"><i class="fas fa-naira-sign"></i> Starting at ₦150k</span>
             </div>
 
             <div class="service-card">
-                <span class="icon"><i class="fas fa-hotel"></i></span>
-                <span class="tag">Hospitality Tech</span>
-                <h3>Hotel Management Systems</h3>
-                <p>
-                    Complete booking, check-in, and payment management apps. Built for
-                    4T Luxury Hotel, Osogbo. Real-time room availability, guest
-                    management, and reporting.
-                </p>
-                <span class="price"><i class="fas fa-naira-sign"></i> Custom Quote</span>
-            </div>
-
-            <div class="service-card">
-                <span class="icon"><i class="fas fa-user-lock"></i></span>
-                <span class="tag">Authentication</span>
-                <h3>User Logins &amp; Dashboards</h3>
-                <p>
-                    Secure login systems, admin dashboards, and client portals. Built
-                    for Buffet On Travels and T Data Connect. Full authentication, role
-                    management, and data privacy.
-                </p>
-                <span class="price"><i class="fas fa-naira-sign"></i> Custom Quote</span>
-            </div>
-
-            <div class="service-card">
                 <span class="icon"><i class="fas fa-chart-line"></i></span>
-                <span class="tag">Digital Marketing</span>
-                <h3>Google &amp; Social Media Ads</h3>
-                <p>
-                    We manage your ad spend like it's our own money. No agency markup on
-                    ad budgets. You pay Google directly. We focus on ROI, not vanity
-                    metrics.
-                </p>
+                <h3>Google &amp; Social Ads</h3>
+                <p>Ad spend managed with full transparency. You pay Google directly. We focus on ROI, not vanity metrics.</p>
                 <span class="price"><i class="fas fa-percent"></i> 15% Management Fee</span>
             </div>
 
             <div class="service-card">
                 <span class="icon"><i class="fas fa-robot"></i></span>
-                <span class="tag">Automation</span>
-                <h3>AI Automation</h3>
-                <p>
-                    WhatsApp chatbots, email sequences, and CRM automations. We save you
-                    hours of manual work every single day.
-                </p>
+                <h3>AI &amp; WhatsApp Automation</h3>
+                <p>WhatsApp chatbots, email sequences, and CRM automations that save hours every week.</p>
                 <span class="price"><i class="fas fa-naira-sign"></i> Custom Quote</span>
             </div>
 
             <div class="service-card">
                 <span class="icon"><i class="fas fa-lightbulb"></i></span>
-                <span class="tag">Consulting</span>
-                <h3>Digital Strategy &amp; Consulting</h3>
-                <p>
-                    Not sure what tech you need? We'll audit your business and give you
-                    a clear, actionable roadmap. No upsells. Just honest advice.
-                </p>
+                <h3>Digital Strategy</h3>
+                <p>Not sure what you need? We audit your business and give you a clear, honest roadmap.</p>
                 <span class="price"><i class="fas fa-check-circle"></i> Free Initial Consultation</span>
             </div>
 
@@ -582,12 +859,12 @@
 
         <!-- ===== CTA BANNER ===== -->
         <div class="cta-banner">
+            <h2>Ready to <span>Start</span> Your Project?</h2>
             <p>
-                <strong style="color: #fff;">Need something else?</strong> We're
-                flexible. Talk to us. We'll tell you honestly if we can do it or not.
+                Book a free 15-minute strategy call. We'll tell you honestly if we can help — or point you in the right direction.
             </p>
-            <a href="/contact.html">
-                <i class="fas fa-arrow-right"></i> Let's Chat
+            <a href="https://wa.me/2348039661354" class="cta-btn">
+                <i class="fab fa-whatsapp"></i> Chat on WhatsApp
             </a>
         </div>
 
@@ -622,7 +899,6 @@
             }
         });
 
-        // Close menu when a link is clicked (mobile)
         document.querySelectorAll('header nav a').forEach(link => {
             link.addEventListener('click', () => {
                 navMenu.classList.remove('open');
