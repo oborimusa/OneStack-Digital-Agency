@@ -1,4 +1,9 @@
 /* ============================================================
+   OneStackDA — script.js
+   Chat widget + Tawk.to + hamburger menu
+   ============================================================ */
+
+/* ============================================================
    CHAT WIDGET — Toggle, quick replies, input, attach, image, emoji
    ============================================================ */
 (function () {
@@ -9,7 +14,7 @@
   const toggle      = document.getElementById('chatToggle');
   const badge       = document.getElementById('chatBadge');
   const input       = document.getElementById('chatInput');
-  const chatBody    = document.getElementById('chatBody');   // renamed from `body`
+  const chatBody    = document.getElementById('chatBody');
   const quickRow    = document.getElementById('chatQuickRow');
   const btnAttach   = document.getElementById('btnAttach');
   const btnImage    = document.getElementById('btnImage');
@@ -21,6 +26,8 @@
   if (!widget || !toggle) return;
 
   const WHATSAPP_URL = 'https://wa.me/2348039661354';
+  const PHONE_NUMBER = 'tel:+2348039661354';
+  const EMAIL_ADDRESS = 'mailto:info@onestackda.com';
 
   /* ---------- Helpers ---------- */
   function escapeHtml(str) {
@@ -36,7 +43,7 @@
   function addUserMessage(html) {
     if (!chatBody) return;
     const msg = document.createElement('div');
-    msg.className = 'chat-msg user dynamic';   // ← added 'dynamic'
+    msg.className = 'chat-msg user dynamic';
     msg.innerHTML = `<div class="chat-msg-bubble">${html}</div>`;
     const anchor = anchorPoint();
     anchor ? chatBody.insertBefore(msg, anchor) : chatBody.appendChild(msg);
@@ -47,7 +54,7 @@
     if (!chatBody) return;
     setTimeout(() => {
       const reply = document.createElement('div');
-      reply.className = 'chat-msg agent';
+      reply.className = 'chat-msg agent dynamic';
       reply.innerHTML = `
         <div class="chat-msg-avatar"><i class="fas fa-user-tie"></i></div>
         <div class="chat-msg-bubble">${text}</div>
@@ -65,8 +72,9 @@
     if (isOpen && badge) badge.style.display = 'none';
   });
 
-
-    /* ---------- Chat header: back + menu ---------- */
+  /* ============================================================
+     CHAT HEADER — Back button + menu dropdown
+     ============================================================ */
   const chatBack          = document.getElementById('chatBack');
   const chatMenuBtn       = document.getElementById('chatMenu');
   const chatMenuDropdown  = document.getElementById('chatMenuDropdown');
@@ -77,10 +85,8 @@
       e.preventDefault();
       e.stopPropagation();
 
-      // Close dropdown if open
       if (chatMenuDropdown) chatMenuDropdown.classList.remove('open');
 
-      // Close the whole widget
       widget.classList.remove('open');
       toggle.setAttribute('aria-expanded', 'false');
     });
@@ -113,59 +119,60 @@
         chatMenuBtn.setAttribute('aria-expanded', 'false');
 
         switch (action) {
-        case 'new':
-    // 1. Remove ALL dynamically-added messages (files, images, typed text)
-    if (chatBody) {
-      chatBody.querySelectorAll('.chat-msg.dynamic').forEach(m => m.remove());
-    }
+          case 'new':
+            // 1. Remove ALL dynamically-added messages (user + agent)
+            if (chatBody) {
+              chatBody.querySelectorAll('.chat-msg.dynamic').forEach(m => m.remove());
+            }
 
-    // 2. Hide the pre-baked user/reply pair
-    const u1 = document.getElementById('userMsg1');
-    const a1 = document.getElementById('agentReply1');
-    if (u1) {
-      u1.style.display = 'none';
-      // Also reset its text back to default
-    const b = u1.querySelector('.chat-msg-bubble');
-    if (b) b.textContent = 'I have a question';
-    }
-    if (a1) a1.style.display = 'none';
+            // 2. Hide the pre-baked user/reply pair
+            const u1 = document.getElementById('userMsg1');
+            const a1 = document.getElementById('agentReply1');
+            if (u1) {
+              u1.style.display = 'none';
+              const b = u1.querySelector('.chat-msg-bubble');
+              if (b) b.textContent = 'I have a question';
+            }
+            if (a1) a1.style.display = 'none';
 
-    // 3. Show the greeting again (in case it was hidden)
-    const greeting = chatBody ? chatBody.querySelector('.chat-msg.agent:not(#agentReply1)') : null;
-    if (greeting) greeting.style.display = 'flex';
+            // 3. Show the greeting again
+            const greeting = chatBody
+              ? chatBody.querySelector('.chat-msg.agent:not(#agentReply1):not(.dynamic)')
+              : null;
+            if (greeting) greeting.style.display = 'flex';
 
-    // 4. Re-show quick reply buttons
-    if (quickRow) {
-      quickRow.style.display = 'flex';
-      quickRow.querySelectorAll('.chat-quick-btn').forEach(b => {
-        b.style.display = '';
-        b.disabled = false;
-      });
-    }
+            // 4. Re-show quick reply buttons
+            if (quickRow) {
+              quickRow.style.display = 'flex';
+              quickRow.querySelectorAll('.chat-quick-btn').forEach(b => {
+                b.style.display = '';
+                b.disabled = false;
+              });
+            }
 
-  // 5. Clear input
-  if (input) input.value = '';
+            // 5. Clear input
+            if (input) input.value = '';
 
-  // 6. Hide emoji picker
-  if (emojiPicker) emojiPicker.style.display = 'none';
+            // 6. Hide emoji picker
+            if (emojiPicker) emojiPicker.style.display = 'none';
 
-  // 7. Reset badge
-  if (badge) badge.style.display = 'none';
+            // 7. Reset badge
+            if (badge) badge.style.display = 'none';
 
-  // 8. Scroll to top
-  if (chatBody) chatBody.scrollTop = 0;
-  break;
+            // 8. Scroll to top
+            if (chatBody) chatBody.scrollTop = 0;
+            break;
 
           case 'whatsapp':
             window.open(WHATSAPP_URL, '_blank', 'noopener');
             break;
 
           case 'call':
-            window.location.href = 'tel:+2348039661354';
+            window.location.href = PHONE_NUMBER;
             break;
 
           case 'email':
-            window.location.href = 'mailto:info@onestackda.com';
+            window.location.href = EMAIL_ADDRESS;
             break;
 
           case 'end':
@@ -196,7 +203,9 @@
     });
   }
 
-  /* ---------- Quick reply buttons ---------- */
+  /* ============================================================
+     QUICK REPLIES
+     ============================================================ */
   if (quickRow) {
     quickRow.querySelectorAll('.chat-quick-btn').forEach(btn => {
       btn.addEventListener('click', () => {
@@ -215,28 +224,26 @@
     });
   }
 
-  /* ---------- Text input — Enter to send ---------- */
+  /* ============================================================
+     TEXT INPUT — Enter to send → WhatsApp redirect
+     ============================================================ */
   if (input) {
     input.addEventListener('keydown', e => {
       if (e.key === 'Enter' && input.value.trim()) {
         e.preventDefault();
         const message = input.value.trim();
 
-        // Show user's message in the chat
         addUserMessage(escapeHtml(message));
         input.value = '';
 
-        // WhatsApp URL with their message prefilled
         const waUrl = `${WHATSAPP_URL}?text=${encodeURIComponent(message)}`;
 
-        // Auto-redirect after a short delay (feels natural)
         setTimeout(() => {
           addAgentReply(
             'Opening WhatsApp so Mary can reply instantly... ' +
             `<a href="${waUrl}" target="_blank" rel="noopener" style="color:#f5a623;">Tap here if it doesn't open</a>.`
           );
 
-          // Open WhatsApp in a new tab after 1.2s
           setTimeout(() => {
             window.open(waUrl, '_blank', 'noopener');
           }, 1200);
@@ -245,14 +252,15 @@
     });
   }
 
-  /* ---------- 📎 Attach file ---------- */
+  /* ============================================================
+     📎 ATTACH FILE
+     ============================================================ */
   if (btnAttach) {
     btnAttach.addEventListener('click', (e) => {
       e.preventDefault();
       if (fileInput) {
         fileInput.click();
       } else {
-        // Fallback: no file input → send to WhatsApp
         addUserMessage('📎 I want to send a file');
         addAgentReply(
           'Please send your file directly on ' +
@@ -278,7 +286,9 @@
     });
   }
 
-  /* ---------- 📷 Image ---------- */
+  /* ============================================================
+     📷 IMAGE
+     ============================================================ */
   if (btnImage) {
     btnImage.addEventListener('click', (e) => {
       e.preventDefault();
@@ -311,7 +321,9 @@
     });
   }
 
-  /* ---------- 😊 Emoji picker ---------- */
+  /* ============================================================
+     😊 EMOJI PICKER
+     ============================================================ */
   if (btnEmoji && emojiPicker) {
     btnEmoji.addEventListener('click', (e) => {
       e.preventDefault();
@@ -320,7 +332,6 @@
       emojiPicker.style.display = isHidden ? 'grid' : 'none';
     });
 
-    // Emoji option clicks — add emoji to input
     emojiPicker.querySelectorAll('.emoji-opt').forEach(btn => {
       btn.addEventListener('click', (e) => {
         e.stopPropagation();
@@ -330,7 +341,6 @@
       });
     });
 
-    // Close picker on outside click — use .closest() for reliability
     document.addEventListener('click', (e) => {
       if (emojiPicker.style.display === 'none') return;
       if (!e.target.closest('#emojiPicker') && !e.target.closest('#btnEmoji')) {
@@ -339,7 +349,9 @@
     });
   }
 
-  /* ---------- Close chat when clicking outside ---------- */
+  /* ============================================================
+     CLOSE CHAT WHEN CLICKING OUTSIDE
+     ============================================================ */
   document.addEventListener('click', e => {
     if (
       widget.classList.contains('open') &&
@@ -347,6 +359,55 @@
     ) {
       widget.classList.remove('open');
       toggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+})();
+
+/* ============================================================
+   HAMBURGER MENU — Mobile navigation toggle
+   ============================================================ */
+(function () {
+  'use strict';
+
+  const hamburger = document.getElementById('hamburger');
+  const navMenu   = document.getElementById('nav-menu');
+
+  if (!hamburger || !navMenu) return;
+
+  const icon = hamburger.querySelector('i');
+
+  function setOpen(isOpen) {
+    navMenu.classList.toggle('open', isOpen);
+    hamburger.classList.toggle('open', isOpen);
+    hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    if (icon) icon.className = isOpen ? 'fas fa-times' : 'fas fa-bars';
+  }
+
+  hamburger.addEventListener('click', (e) => {
+    e.stopPropagation();
+    setOpen(!navMenu.classList.contains('open'));
+  });
+
+  navMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => setOpen(false));
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!navMenu.classList.contains('open')) return;
+    if (!e.target.closest('#nav-menu') && !e.target.closest('#hamburger')) {
+      setOpen(false);
+    }
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768 && navMenu.classList.contains('open')) {
+      setOpen(false);
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && navMenu.classList.contains('open')) {
+      setOpen(false);
     }
   });
 })();
