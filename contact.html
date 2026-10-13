@@ -26,7 +26,9 @@
 
   <!-- ===== FONT AWESOME ===== -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link rel="stylesheet" href="CSS/style.css">
+
+  <!-- ===== SITE STYLES (lowercase path!) ===== -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div class="container">
@@ -125,17 +127,24 @@
 
     <!-- ===== HERO ===== -->
     <section class="hero">
-      <div class="badge">
-        <i class="fas fa-bolt"></i> GET IN TOUCH
+      <div class="hero-content">
+        <div class="badge">
+          <i class="fas fa-bolt"></i> GET IN TOUCH
+        </div>
+        <h1>Talk to <span class="highlight">Us</span></h1>
+        <p>
+          Reach out via phone, email, or WhatsApp. We reply within hours — not days.
+          <strong>Based in Osogbo — serving Nigeria nationwide.</strong>
+        </p>
+        <div class="hero-cta-row">
+          <a href="https://wa.me/2348039661354" class="cta-btn" target="_blank" rel="noopener">
+            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+          </a>
+          <a href="mailto:info@onestackda.com" class="cta-btn cta-btn-outline">
+            <i class="fas fa-envelope"></i> Send an Email
+          </a>
+        </div>
       </div>
-      <h1>Talk to <span>Us</span></h1>
-      <p>
-        Reach out via phone, email, or WhatsApp. We reply within hours — not days.
-        <strong>Based in Osogbo — serving Nigeria nationwide.</strong>
-      </p>
-      <a href="https://wa.me/2348039661354" class="cta-btn" target="_blank" rel="noopener">
-        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-      </a>
     </section>
 
     <!-- ===== CONTACT CARDS ===== -->
@@ -165,7 +174,7 @@
         <span class="icon"><i class="fas fa-map-marker-alt"></i></span>
         <h3>Location</h3>
         <p>Remote-first</p>
-        <p style="color: #666; font-size: 0.85rem;">Osogbo, Nigeria</p>
+        <span class="contact-meta">Osogbo, Nigeria</span>
       </div>
     </div>
 
@@ -188,12 +197,20 @@
 
     <!-- ===== FORM ===== -->
     <div class="form-section">
-      <h2>Send a Message</h2>
+      <h2>Send a <span>Message</span></h2>
       <p class="form-subtitle">Fill this out and we'll reach out within 24 hours.</p>
 
-      <form name="contact" method="POST" data-netlify="true" class="form-group" netlify-honeypot="bot-field">
+      <form
+        name="contact"
+        method="POST"
+        action="/success.html"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        class="form-group"
+      >
         <input type="hidden" name="form-name" value="contact" />
-        <p style="display: none;">
+
+        <p class="hidden-honeypot">
           <label>Don't fill this out if you're human: <input name="bot-field" /></label>
         </p>
 
@@ -287,23 +304,45 @@
       </div>
 
       <div class="chat-panel-footer">
-        <input
-          type="text"
-          id="chatInput"
-          class="chat-input"
-          placeholder="Type here and press enter.."
-          autocomplete="off"
-        />
-        <button class="chat-icon-btn" aria-label="Attach">
-          <i class="fas fa-paperclip"></i>
-        </button>
-        <button class="chat-icon-btn" aria-label="Image">
-          <i class="fas fa-image"></i>
-        </button>
-        <button class="chat-icon-btn" aria-label="Emoji">
-          <i class="far fa-smile"></i>
-        </button>
-      </div>
+  <input
+    type="text"
+    id="chatInput"
+    class="chat-input"
+    placeholder="Type here and press enter.."
+    autocomplete="off"
+    aria-label="Chat message"
+  />
+
+  <!-- Hidden file inputs -->
+  <input type="file" id="chatFileInput" style="display:none;" />
+  <input type="file" id="chatImageInput" accept="image/*" style="display:none;" />
+
+  <button type="button" class="chat-icon-btn" id="btnAttach" aria-label="Attach file" title="Attach file">
+    <i class="fas fa-paperclip"></i>
+  </button>
+  <button type="button" class="chat-icon-btn" id="btnImage" aria-label="Send image" title="Send image">
+    <i class="fas fa-image"></i>
+  </button>
+  <button type="button" class="chat-icon-btn" id="btnEmoji" aria-label="Insert emoji" title="Insert emoji">
+    <i class="fas fa-smile"></i>
+  </button>
+</div>
+
+<!-- Emoji picker panel (hidden by default) -->
+<div class="chat-emoji-picker" id="emojiPicker" style="display:none;">
+  <button type="button" class="emoji-opt">😀</button>
+  <button type="button" class="emoji-opt">😊</button>
+  <button type="button" class="emoji-opt">👍</button>
+  <button type="button" class="emoji-opt">🙏</button>
+  <button type="button" class="emoji-opt">❤️</button>
+  <button type="button" class="emoji-opt">🔥</button>
+  <button type="button" class="emoji-opt">✅</button>
+  <button type="button" class="emoji-opt">😅</button>
+  <button type="button" class="emoji-opt">🤝</button>
+  <button type="button" class="emoji-opt">💬</button>
+  <button type="button" class="emoji-opt">📞</button>
+  <button type="button" class="emoji-opt">💰</button>
+</div>
 
       <div class="chat-powered">
         <span>🦜 Powered by <strong>OneStackDA Chat</strong></span>
