@@ -220,12 +220,27 @@
     input.addEventListener('keydown', e => {
       if (e.key === 'Enter' && input.value.trim()) {
         e.preventDefault();
-        addUserMessage(escapeHtml(input.value));
+        const message = input.value.trim();
+
+        // Show user's message in the chat
+        addUserMessage(escapeHtml(message));
         input.value = '';
-        addAgentReply(
-          'Thanks! Mary will reply shortly. For a faster response, ' +
-          `<a href="${WHATSAPP_URL}" target="_blank" rel="noopener" style="color:#f5a623;">chat on WhatsApp</a>.`
-        );
+
+        // WhatsApp URL with their message prefilled
+        const waUrl = `${WHATSAPP_URL}?text=${encodeURIComponent(message)}`;
+
+        // Auto-redirect after a short delay (feels natural)
+        setTimeout(() => {
+          addAgentReply(
+            'Opening WhatsApp so Mary can reply instantly... ' +
+            `<a href="${waUrl}" target="_blank" rel="noopener" style="color:#f5a623;">Tap here if it doesn't open</a>.`
+          );
+
+          // Open WhatsApp in a new tab after 1.2s
+          setTimeout(() => {
+            window.open(waUrl, '_blank', 'noopener');
+          }, 1200);
+        }, 400);
       }
     });
   }
