@@ -1480,13 +1480,13 @@
 
       /* Chat widget mobile */
       .chat-widget {
-        bottom: 16px;
-        right: 16px;
-      }
+        bottom: 6px;
+        right: 6px;
+        }
 
       .chat-panel {
-        width: calc(100vw - 24px);
-        height: calc(100vh - 110px);
+        width: calc(80vw - 24px);
+        height: calc(100vh - 100px);
         bottom: 74px;
         right: -8px;
         border-radius: 14px;
