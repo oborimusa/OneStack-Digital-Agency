@@ -1093,7 +1093,7 @@ footer .footer-links a:hover { color: #f5a623; text-decoration: underline; }
 
 /* ─── Header ─── */
 .chat-panel-header {
-  background: #c99a1f;
+  background: #c9821f;
   color: #1a1a1a;
   padding: 14px 16px;
   display: flex;
@@ -1131,7 +1131,7 @@ footer .footer-links a:hover { color: #f5a623; text-decoration: underline; }
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  background: #f5e2b1;
+  background: #f5dfb1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1228,7 +1228,7 @@ footer .footer-links a:hover { color: #f5a623; text-decoration: underline; }
 }
 
 .chat-msg.agent .chat-msg-bubble {
-  background: #c99a1f;
+  background: #c9821f;
   color: #1a1a1a;
   border-bottom-left-radius: 4px;
 }
