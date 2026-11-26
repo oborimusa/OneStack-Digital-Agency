@@ -1,156 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register - OneStack DA | 2 Slots Discounted Website Offer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
-        body { background: #f5f7fb; color: #0A2351; line-height: 1.6; }
-        
-        /* Header */
-        .header { background: #fff; padding: 16px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); flex-wrap: wrap; gap: 10px; }
-        .logo { display: flex; align-items: center; gap: 8px; text-decoration: none; font-weight: 800; font-size: 22px; color: #0A2351; }
-        .logo img { height: 32px; width: auto; }
-        .logo-one { color: #0A2351; } 
-        .logo-stack { color: #0A2351; } 
-        .logo-da { color: #FFC107; }
-        .header-right { text-align: right; }
-        .tagline { font-size: 12px; color: #64748b; font-weight: 400; }
-        .whatsapp-top { font-size: 13px; font-weight: 700; color: #0A2351; }
-        
-        /* Hero */
-        .hero { background: linear-gradient(135deg, #0A2351 0%, #12367f 100%); color: #fff; padding: 50px 5%; text-align: center; }
-        .badge { background: #FFC107; color: #0A2351; padding: 8px 18px; border-radius: 30px; font-weight: 800; display: inline-block; margin-bottom: 20px; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; }
-        .hero h1 { font-size: 32px; line-height: 1.2; max-width: 700px; margin: 0 auto; }
-        .hero h1 b { color: #FFC107; }
-        .hero p { margin-top: 15px; font-size: 1.1rem; }
-        
-        /* Form Container */
-        .container { max-width: 800px; margin: -30px auto 40px; background: #fff; border-radius: 20px; box-shadow: 0 20px 40px rgba(10,35,81,0.12); overflow: hidden; position: relative; z-index: 10; }
-        .form-header { padding: 25px; background: #fff; border-bottom: 1px solid #eef2f7; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
-        .form-header h2 { color: #0A2351; font-size: 1.4rem; }
-        .deposit-badge { background: #0A2351; color: #fff; padding: 8px 14px; border-radius: 8px; font-weight: 700; font-size: 0.9rem; }
-        .deposit-badge span { color: #FFC107; }
-        
-        /* Form Fields */
-        .form-body { padding: 30px; }
-        label { font-weight: 600; font-size: 14px; margin: 16px 0 6px; display: block; color: #0A2351; }
-        input, select, textarea { width: 100%; padding: 13px 15px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 15px; font-family: 'Inter', sans-serif; transition: 0.2s; }
-        input:focus, select:focus, textarea:focus { outline: none; border-color: #0A2351; background: #f8fafc; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-        
-        /* Buttons */
-        .btn { width: 100%; padding: 16px; background: #0A2351; color: #fff; border: none; border-radius: 10px; font-weight: 800; font-size: 16px; cursor: pointer; margin-top: 24px; transition: 0.2s; display: block; text-align: center; text-decoration: none; }
-        .btn:hover { background: #12367f; transform: translateY(-2px); box-shadow: 0 4px 15px rgba(10,35,81,0.3); }
-        .btn-wa { background: #25D366; margin-top: 12px; color: #fff; }
-        .btn-wa:hover { background: #1fa852; box-shadow: 0 4px 15px rgba(37,211,102,0.3); }
-        
-        @media(max-width: 600px) {
-            .grid { grid-template-columns: 1fr; }
-            .hero h1 { font-size: 26px; }
-            .form-header { flex-direction: column; align-items: flex-start; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register - OneStack DA | 2 Slots Discounted Website Offer</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,Segoe UI,sans-serif}
+body{background:#f5f7fb;color:#0A2351;line-height:1.6}
+.header{background:#fff;padding:16px 5%;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 10px rgba(0,0,0,0.05);flex-wrap:wrap;gap:10px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;font-weight:800;font-size:22px;color:#0A2351}
+.logo img{height:32px;width:auto}
+.logo-one{color:#0A2351} .logo-stack{color:#0A2351} .logo-da{color:#FFC107}
+.header-right{text-align:right}
+.tagline{font-size:12px;color:#64748b;font-weight:400}
+.whatsapp-top{font-size:13px;font-weight:700;color:#0A2351}
+.hero{background:linear-gradient(135deg,#0A2351 0%,#12367f 100%);color:#fff;padding:50px 5%;text-align:center}
+.badge{background:#FFC107;color:#0A2351;padding:8px 18px;border-radius:30px;font-weight:800;display:inline-block;margin-bottom:20px;font-size:13px}
+.hero h1{font-size:32px;line-height:1.2;max-width:700px;margin:0 auto} .hero h1 b{color:#FFC107}
+.container{max-width:800px;margin:-30px auto 40px;background:#fff;border-radius:20px;box-shadow:0 20px 40px rgba(10,35,81,0.12);overflow:hidden}
+.form-header{padding:25px;background:#fff;border-bottom:1px solid #eef2f7;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.form-body{padding:30px}
+label{font-weight:600;font-size:14px;margin:16px 0 6px;display:block}
+input,select,textarea{width:100%;padding:13px 15px;border:2px solid #e2e8f0;border-radius:10px;font-size:15px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:600px){.grid{grid-template-columns:1fr}}
+.btn{width:100%;padding:15px;background:#0A2351;color:#fff;border:none;border-radius:10px;font-weight:800;font-size:16px;cursor:pointer;margin-top:20px}
+.btn:hover{background:#12367f}
+.btn-wa{background:#25D366;display:block;text-align:center;text-decoration:none;margin-top:12px;color:#fff;border-radius:10px;padding:15px;font-weight:700}
+</style>
 </head>
 <body>
 
 <div class="header">
-    <a href="https://hteanigeria.com.ng" class="logo">
-        <span class="logo-one">One</span><span class="logo-stack">Stack</span><span class="logo-da">DA</span>
-    </a>
-    <div class="header-right">
-        <div class="tagline">Build. Automate. Grow.</div>
-        <div class="whatsapp-top">WhatsApp: 08039661354</div>
-    </div>
+  <a href="/" class="logo">
+    <img src="images/logo2.png" alt="onestackda" onerror="this.style.display='none'">
+    <span class="logo-one">One</span><span class="logo-stack">Stack</span><span class="logo-da">DA</span>
+  </a>
+  <div class="header-right">
+    <div class="tagline">Build. Automate. Grow.</div>
+    <div class="whatsapp-top">WhatsApp: 08039661354</div>
+  </div>
 </div>
 
 <div class="hero">
-    <div class="badge">LIMITED-TIME OFFER! • 2 SLOTS ONLY THIS WEEK</div>
-    <h1>I am offering <b>2 Website Builds or Booking System Setups</b> this week at a Discounted Rate</h1>
-    <p>First come, first served. Secure with 50% Deposit of <b style="color:#FFC107">₦50,000</b></p>
+<div class="badge">LIMITED-TIME OFFER! • 2 SLOTS ONLY THIS WEEK</div>
+<h1>I am offering <b>2 Website Builds or Booking System Setups</b> this week at a Discounted Rate</h1>
+<p>First come, first served. Secure with 50% Deposit of <b style="color:#FFC107">₦50,000</b></p>
 </div>
 
 <div class="container">
-    <div class="form-header">
-        <h2>📝 Register Your Slot</h2>
-        <div class="deposit-badge">50% Deposit: <span>₦50,000</span></div>
-    </div>
-    
-    <div class="form-body">
-        <form id="registrationForm">
-            <div class="grid">
-                <div>
-                    <label>Full Name *</label>
-                    <input type="text" id="fullname" required placeholder="e.g. David Johnson">
-                </div>
-                <div>
-                    <label>Business Name</label>
-                    <input type="text" id="business" placeholder="e.g. Johnson Salon">
-                </div>
-            </div>
-            
-            <div class="grid">
-                <div>
-                    <label>WhatsApp Number *</label>
-                    <input type="tel" id="whatsapp" required placeholder="08039661354">
-                </div>
-                <div>
-                    <label>Email Address *</label>
-                    <input type="email" id="email" required placeholder="you@example.com">
-                </div>
-            </div>
-            
-            <label>Service Interested In *</label>
-            <select id="service" required>
-                <option value="">-- Choose Service --</option>
-                <option value="Website Build">Website Build (Discounted)</option>
-                <option value="Booking System Setup">Booking System Setup (Discounted)</option>
-                <option value="Website + Booking System">Website + Booking System (Bundle)</option>
-            </select>
-            
-            <label>Describe Your Project *</label>
-            <textarea id="project" rows="4" required placeholder="Tell us what you need... e.g. I need a booking website for my barbershop"></textarea>
-            
-            <label>Deposit Ready?</label>
-            <select id="budget" required>
-                <option value="">Can you pay 50% deposit of ₦50,000?</option>
-                <option value="Yes - Ready to pay now">Yes - Ready to pay now</option>
-                <option value="Yes - Within 24 hours">Yes - Within 24 hours</option>
-                <option value="Need more info">Need more info first</option>
-            </select>
-            
-            <button type="submit" class="btn">Secure My Slot Now →</button>
-            <a href="https://wa.me/2348039661354?text=Hi%20OneStackDA%2C%20I%20want%20to%20register%20for%20the%20discounted%20website%20offer" class="btn btn-wa" target="_blank">💬 Chat Directly on WhatsApp</a>
-        </form>
-    </div>
+<div class="form-header"><h2>📝 Register Your Slot</h2><div style="background:#0A2351;color:#fff;padding:8px 14px;border-radius:8px;font-weight:700">50% Deposit: <span style="color:#FFC107">₦50,000</span></div></div>
+<div class="form-body">
+<form id="registrationForm">
+<div class="grid">
+<div><label>Full Name *</label><input type="text" name="fullname" required placeholder="e.g. David Johnson"></div>
+<div><label>Business Name</label><input type="text" name="business" placeholder="e.g. Johnson Salon"></div>
+</div>
+<div class="grid">
+<div><label>WhatsApp Number *</label><input type="tel" name="whatsapp" required placeholder="08039661354"></div>
+<div><label>Email Address *</label><input type="email" name="email" required placeholder="you@example.com"></div>
+</div>
+<label>Service Interested In *</label>
+<select name="service" required>
+<option value="">-- Choose Service --</option>
+<option value="Website Build">Website Build (Discounted)</option>
+<option value="Booking System Setup">Booking System Setup (Discounted)</option>
+<option value="Website + Booking System">Website + Booking System (Bundle)</option>
+</select>
+<label>Describe Your Project *</label>
+<textarea name="project" rows="4" required placeholder="Tell us what you need... e.g. I need a booking website for my barbershop"></textarea>
+<label>Deposit Ready?</label>
+<select name="budget" required>
+<option value="">Can you pay 50% deposit of ₦50,000?</option>
+<option value="Yes - Ready to pay now">Yes - Ready to pay now</option>
+<option value="Yes - Within 24 hours">Yes - Within 24 hours</option>
+<option value="Need more info">Need more info first</option>
+</select>
+<button type="submit" class="btn">Secure My Slot Now →</button>
+<a class="btn btn-wa" href="https://wa.me/2348039661354?text=Hi%2C%20I%20want%20to%20register%20for%20the%20discounted%20website%20offer" target="_blank">💬 Chat Directly on WhatsApp: 08039661354</a>
+</form>
+</div>
 </div>
 
 <script>
-    document.getElementById('registrationForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Get values
-        const name = document.getElementById('fullname').value;
-        const business = document.getElementById('business').value;
-        const whatsapp = document.getElementById('whatsapp').value;
-        const email = document.getElementById('email').value;
-        const service = document.getElementById('service').value;
-        const project = document.getElementById('project').value;
-        const budget = document.getElementById('budget').value;
-        
-        // Format message with proper URL encoding for WhatsApp
-        const message = `*NEW REGISTRATION - OneStack DA Offer*%0A%0A*Name:* ${name}%0A*Business:* ${business}%0A*WhatsApp:* ${whatsapp}%0A*Email:* ${email}%0A*Service:* ${service}%0A*Project:* ${project}%0A*Deposit Ready:* ${budget}`;
-        
-        // Open WhatsApp
-        window.open(`https://wa.me/2348039661354?text=${message}`, '_blank');
-        
-        // Alert user
-        setTimeout(() => {
-            alert('Great! Please tap SEND on WhatsApp to confirm your slot.');
-        }, 500);
-    });
+document.getElementById('registrationForm').addEventListener('submit', function(e){
+ e.preventDefault();
+ const d = new FormData(e.target);
+ // Build message with line breaks encoded as %0A
+ let text = '*NEW REGISTRATION - OneStack DA Offer*%0A';
+ text += 'Name: ' + encodeURIComponent(d.get('fullname')) + '%0A';
+ text += 'Business: ' + (d.get('business') ? encodeURIComponent(d.get('business')) : '—') + '%0A';
+ text += 'WhatsApp: ' + encodeURIComponent(d.get('whatsapp')) + '%0A';
+ text += 'Email: ' + encodeURIComponent(d.get('email')) + '%0A';
+ text += 'Service: ' + encodeURIComponent(d.get('service')) + '%0A';
+ text += 'Project: ' + encodeURIComponent(d.get('project')) + '%0A';
+ text += 'Deposit: ' + encodeURIComponent(d.get('budget'));
+ window.open('https://wa.me/2348039661354?text=' + text, '_blank');
+ alert('Great! Please tap SEND on WhatsApp to confirm your slot.');
+});
 </script>
 </body>
 </html>
